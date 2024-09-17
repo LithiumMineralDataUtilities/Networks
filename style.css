@@ -1,0 +1,49 @@
+/* Basic reset for margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set a background image and adjust its appearance */
+body {
+    background-image: url('your-background-image.jpg'); /* Use the path to your image */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Fixes the background when scrolling */
+    font-family: 'Arial', sans-serif;
+    color: #fff; /* Default text color */
+    height: 100vh; /* Make sure the body takes up full viewport height */
+}
+
+/* Style for the content wrapper */
+.content {
+    text-align: center;
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.5); /* Adds transparency to the content area */
+    border-radius: 10px;
+    width: 60%;
+    margin: 100px auto; /* Centers the content on the page */
+}
+
+/* Header styles */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* Paragraph styles */
+p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+/* Add responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .content {
+        width: 90%;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+}
