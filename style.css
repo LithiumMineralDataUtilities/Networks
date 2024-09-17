@@ -7,7 +7,7 @@
 
 /* Set a background image and adjust its appearance */
 body {
-    background-image: url('your-background-image.jpg'); /* Use the path to your image */
+    background-image: url('Leucogranite.jpg'); /* Use the path to your image */
     background-size: cover; /* Ensures the image covers the entire background */
     background-repeat: no-repeat; /* Prevents the image from repeating */
     background-attachment: fixed; /* Fixes the background when scrolling */
