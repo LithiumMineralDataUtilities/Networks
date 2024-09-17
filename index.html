@@ -6,7 +6,78 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Interactive Network Diagrams</title>
     <style>
-        /* Include the updated CSS here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            margin: 10px;
+            padding: 10px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .top-container {
+            display: flex;
+            justify-content: space-around; /* Distribute links evenly */
+            align-items: center; /* Center items vertically */
+        }
+
+        .link-item {
+            margin: 0 10px; /* Space between links */
+        }
+
+        .second-container {
+            display: flex;
+            align-items: flex-start; /* Align items at the top */
+        }
+
+        .text-content {
+            flex: 1; /* Let the text take up the remaining space */
+        }
+
+        .second-container img {
+            height: auto; /* Maintain aspect ratio */
+            width: 300px; /* Adjust width as needed */
+            margin-left: 20px; /* Space between text and image */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            width: 100%;
+        }
+
+        .page-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .page-list li {
+            margin: 10px 0;
+        }
+
+        .page-list a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+        }
+
+        .page-list a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
