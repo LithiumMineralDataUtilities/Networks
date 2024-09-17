@@ -8,57 +8,27 @@
     <style>
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
         header { background-color: #333; color: white; padding: 20px; text-align: center; }
-        
-        /* Flexbox layout for content container */
-        .content-container { 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: stretch; /* Ensure the image stretches to match the height */
+        .content { 
             margin: 20px; 
             padding: 20px; 
             background-color: white; 
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start; /* Align items by the top */
         }
-
-        /* Main content block should take up remaining space */
-        .content { 
-            flex-grow: 1; 
-            padding-right: 20px; /* Adds space between the text and the image */
-        }
-        
-        /* Ensure the image fills the height of the container */
-        .content-container img { 
-            height: 100%; /* Make the image fill the container height */
+        footer { text-align: center; padding: 10px; background-color: #333; color: white; width: 100%; }
+        .page-list { list-style-type: none; padding: 0; }
+        .page-list li { margin: 10px 0; }
+        .page-list a { text-decoration: none; color: #333; font-size: 18px; }
+        .page-list a:hover { text-decoration: underline; }
+        .content img {
+            height: 100%; /* Make the image take up the height of the container */
             width: auto; /* Maintain aspect ratio */
-            object-fit: cover; /* Ensure the image covers the full container height */
-            margin-left: 20px; /* Add space between the text and the image */
+            margin-left: 20px; /* Add some space between the text and the image */
         }
-
-        footer { 
-            text-align: center; 
-            padding: 10px; 
-            background-color: #333; 
-            color: white; 
-            width: 100%; 
-        }
-
-        .page-list { 
-            list-style-type: none; 
-            padding: 0; 
-        }
-
-        .page-list li { 
-            margin: 10px 0; 
-        }
-
-        .page-list a { 
-            text-decoration: none; 
-            color: #333; 
-            font-size: 18px; 
-        }
-
-        .page-list a:hover { 
-            text-decoration: underline; 
+        .text-content {
+            flex-grow: 1; /* Allow the text to take up the remaining space */
         }
     </style>
 </head>
@@ -67,21 +37,20 @@
         <h1>Interactive Network Diagrams</h1>
     </header>
 
-    <!-- First content block with image -->
-    <div class="content-container">
-        <div class="content">
+    <!-- First Container - No Image -->
+    <div class="content">
+        <div class="text-content">
             <ul class="page-list">
                 <li><a href="page0.html">Lithium Minerals</a></li>
             </ul>
         </div>
-        <img src="image1.jpg" alt="">
     </div>
 
-    <!-- Second content block with image -->
-    <div class="content-container">
-        <div class="content">
+    <!-- Second Container - Image and Text -->
+    <div class="content">
+        <div class="text-content">
             <h2>Network Diagrams by Locality:</h2>
-            <ul class="page-list">           
+            <ul class="page-list">
                 <li><a href="page1.html">North American Lithium mine</a></li>
                 <li><a href="page2.html">Jiajika Mine</a></li>
                 <li><a href="page3.html">Cattlin Creek South Mine</a></li>
@@ -91,11 +60,11 @@
                 <li><a href="page7.html">Jadar lithium Deposit</a></li>
                 <li><a href="page8.html">Hallman-Beam Mine</a></li>
                 <li><a href="page9.html">Harding Mine</a></li>
-                <li><a href="page10.html">McDermitt Mine</a></li>        
+                <li><a href="page10.html">McDermitt Mine</a></li>
                 <li><a href="page11.html">Spor Mountain Mining District</a></li>
             </ul>
         </div>
-        <img src="Leucogranite.jpg" alt="Network Diagrams by Locality Image">
+        <img src="Leucogranite.jpg" alt="">
     </div>
 
     <footer>
