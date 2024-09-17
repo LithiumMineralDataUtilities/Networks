@@ -6,17 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Interactive Network Diagrams</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 10; padding: 0; background-color: #f4f4f4; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
         header { background-color: #333; color: white; padding: 20px; text-align: center; }
-        .content {
+        .container {
             margin: 10px;
             padding: 10px;
             background-color: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .top-container {
             display: flex;
-            justify-content: flex-start; /* Align both text and image to the left */
-            align-items: flex-start; /* Align items at the top */
-            gap: 10px; /* Space between the text and image */
+            justify-content: space-between; /* Distribute links evenly */
+            align-items: center; /* Center items vertically */
+        }
+        .top-container .link-item {
+            margin: 0 10px; /* Space between links */
         }
         footer { text-align: center; padding: 10px; background-color: #333; color: white; width: 100%; }
         .page-list { list-style-type: none; padding: 0; }
@@ -24,11 +28,8 @@
         .page-list a { text-decoration: none; color: #333; font-size: 18px; }
         .page-list a:hover { text-decoration: underline; }
         .content img {
-            height: 100%; /* Set image to fill the height of the container */
-            width: auto; /* Maintain aspect ratio */
-        }
-        .text-content {
-            flex-grow: 2; /* Let the text take up the remaining space */
+            height: auto; /* Maintain aspect ratio */
+            width: 100px; /* Fixed width */
         }
     </style>
 </head>
@@ -37,17 +38,15 @@
         <h1>Interactive Network Diagrams</h1>
     </header>
 
-    <!-- First Container - No Image -->
-    <div class="content">
-        <div class="text-content">
-            <ul class="page-list">
-                <li><a href="page0.html">Lithium Minerals</a></li>
-            </ul>
-        </div>
+    <!-- Top Container with Three Links -->
+    <div class="container top-container">
+        <div class="link-item"><a href="page0.html">Lithium Minerals</a></div>
+        <div class="link-item"><a href="ParageneticModes.html">Paragenetic Modesk</a></div>
+        <div class="link-item"><a href="anotherpage.html">Another Link</a></div>
     </div>
 
-    <!-- Second Container - Image and Text -->
-    <div class="content">
+    <!-- Second Container -->
+    <div class="container second-container">
         <div class="text-content">
             <h2>Network Diagrams by Locality:</h2>
             <ul class="page-list">
@@ -64,9 +63,10 @@
                 <li><a href="page11.html">Spor Mountain Mining District</a></li>
             </ul>
         </div>
-        <img src="Leucogranite.jpg" alt="">
+        <img src="Leucogranite.jpg" alt="Leucogranite Image">
     </div>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 LMLD Resources</p>
     </footer>
