@@ -9,57 +9,54 @@
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
         header { background-color: #333; color: white; padding: 20px; text-align: center; }
         
-        /* Use flexbox layout */
+        /* Flexbox layout for content container */
         .content-container { 
             display: flex; 
             justify-content: space-between; 
-            align-items: flex-start; 
+            align-items: stretch; /* Ensure the image stretches to match the height */
             margin: 20px; 
             padding: 20px; 
             background-color: white; 
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
         }
-        
-        /* Ensure content takes majority of the space */
+
+        /* Main content block should take up remaining space */
         .content { 
             flex-grow: 1; 
-            flex-basis: 70%; 
-            padding-right: 20px; /* Add space between text and image */
+            padding-right: 20px; /* Adds space between the text and the image */
         }
         
-        /* Set a fixed image size to prevent it from being too large */
-        .content img { 
-            width: 400px; /* Set a fixed width for the image */
-            height: auto; /* Maintain aspect ratio */
-            object-fit: cover; /* Ensure image scales properly */
-            margin-left: 20px; /* Optional margin for space between text and image */
+        /* Ensure the image fills the height of the container */
+        .content-container img { 
+            height: 100%; /* Make the image fill the container height */
+            width: auto; /* Maintain aspect ratio */
+            object-fit: cover; /* Ensure the image covers the full container height */
+            margin-left: 20px; /* Add space between the text and the image */
         }
-        
+
         footer { 
             text-align: center; 
             padding: 10px; 
             background-color: #333; 
             color: white; 
             width: 100%; 
-            position: fixed; 
-            bottom: 0; 
         }
-        
+
         .page-list { 
             list-style-type: none; 
             padding: 0; 
         }
-        
+
         .page-list li { 
             margin: 10px 0; 
         }
-        
+
         .page-list a { 
             text-decoration: none; 
             color: #333; 
             font-size: 18px; 
         }
-        
+
         .page-list a:hover { 
             text-decoration: underline; 
         }
@@ -69,8 +66,8 @@
     <header>
         <h1>Interactive Network Diagrams</h1>
     </header>
-    
-    <!-- First content block -->
+
+    <!-- First content block with image -->
     <div class="content-container">
         <div class="content">
             <ul class="page-list">
@@ -79,8 +76,8 @@
         </div>
         
     </div>
-    
-    <!-- Second content block -->
+
+    <!-- Second content block with image -->
     <div class="content-container">
         <div class="content">
             <h2>Network Diagrams by Locality:</h2>
@@ -100,7 +97,7 @@
         </div>
         <img src="Leucogranite.jpg" alt="Network Diagrams by Locality Image">
     </div>
-    
+
     <footer>
         <p>&copy; 2024 LMLD Resources</p>
     </footer>
