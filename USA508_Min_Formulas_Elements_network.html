@@ -1,0 +1,230 @@
+
+    <div style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); color: white; font-size: 14px; font-weight: bold; z-index: 9999;">
+        USA508 Minerals, Chemical Formulas & Chemical Elements Network
+    </div>
+    
+    <div style="position: absolute; top: 10px; right: 10px; background-color: white; padding: 5px; border-radius: 5px; z-index: 9999; width: 90;">
+        <h4 style="margin: 0 0 5px 0; font-size: 10px;">Crystal Systems</h4>
+    <span style="background-color: #1b9e77; padding: 3px; color: black; margin-right: 5px; font-size: 10px;">Triclinic</span><br><span style="background-color: #d95f02; padding: 3px; color: black; margin-right: 5px; font-size: 10px;">Monoclinic</span><br><span style="background-color: #7570b3; padding: 3px; color: black; margin-right: 5px; font-size: 10px;">Orthorhombic</span><br><span style="background-color: #e7298a; padding: 3px; color: black; margin-right: 5px; font-size: 10px;">Tetragonal</span><br><span style="background-color: #66a61e; padding: 3px; color: black; margin-right: 5px; font-size: 10px;">Hexagonal</span><br><span style="background-color: #e6ab02; padding: 3px; color: black; margin-right: 5px; font-size: 10px;">Cubic</span><br><span style="background-color: #a6761d; padding: 3px; color: black; margin-right: 5px; font-size: 10px;">Amorphous </span><br></div>
+    <div style="position: absolute; top: 60px; left: 10px; background-color: white; padding: 5px; border-radius: 5px; z-index: 9999; width: 90px;">
+        <h4 style="margin: 0 0 5px 0; font-size: 10px;">Oldest Known Mineral Age (Ma)</h4>
+    
+        <div style="display: flex; align-items: center; margin-bottom: 5px;">
+            <div style="width: 5px; height: 5px; border-radius: 50%; background-color: gray; margin-right: 10px;"></div>
+            <span style="font-size: 10px;">0</span>
+        </div>
+        
+        <div style="display: flex; align-items: center; margin-bottom: 5px;">
+            <div style="width: 12.5px; height: 12.5px; border-radius: 50%; background-color: gray; margin-right: 10px;"></div>
+            <span style="font-size: 10px;">1175</span>
+        </div>
+        
+        <div style="display: flex; align-items: center; margin-bottom: 5px;">
+            <div style="width: 20.0px; height: 20.0px; border-radius: 50%; background-color: gray; margin-right: 10px;"></div>
+            <span style="font-size: 10px;">2350</span>
+        </div>
+        
+        <div style="display: flex; align-items: center; margin-bottom: 5px;">
+            <div style="width: 27.5px; height: 27.5px; border-radius: 50%; background-color: gray; margin-right: 10px;"></div>
+            <span style="font-size: 10px;">3525</span>
+        </div>
+        
+        <div style="display: flex; align-items: center; margin-bottom: 5px;">
+            <div style="width: 35.0px; height: 35.0px; border-radius: 50%; background-color: gray; margin-right: 10px;"></div>
+            <span style="font-size: 10px;">4700</span>
+        </div>
+        
+    <div style="display: flex; align-items: center; margin-bottom: 5px;">
+        <div style="width: 20px; height: 20px; border-radius: 50%; border: 2px solid black; background-color: white; margin-right: 10px;"></div>
+        <span style="font-size: 10px;">No Size Data</span>
+    </div>
+    </div>
+    <script type="text/javascript">
+        var network = null;
+        function togglePhysics() {
+            if (network === null) {
+                network = this.vis.Network(document.getElementById('mynetwork'), data, options);
+            }
+            var physicsEnabled = network.physics.options.enabled;
+            network.setOptions({
+                physics: {
+                    enabled: !physicsEnabled,
+                    stabilization: {
+                        enabled: true
+                    },
+                    solver: 'forceAtlas2Based',
+                    forceAtlas2Based: {
+                        gravitationalConstant: -50,
+                        centralGravity: 0.01,
+                        springLength: 80,
+                        springConstant: 0.08
+                    },
+                    barnesHut: {
+                        gravitationalConstant: -50,
+                        centralGravity: 0.01,
+                        springLength: 80,
+                        springConstant: 0.08
+                    }
+                }
+            });
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('togglePhysics').addEventListener('click', togglePhysics);
+        });
+    </script>
+    <button id="togglePhysics" style="position: absolute; top: 10px; left: 10px; background-color: #007bff; color: white; font-size: 11px; border: none; padding: 10px; border-radius: 5px; cursor: pointer; z-index: 9999;">Toggle Physics</button>
+    <html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 800px;
+                 background-color: black;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#1b9e77", "font": {"color": "white"}, "id": "Kaolinite", "label": "Kaolinite", "shape": "dot", "size": 38.344148936170214, "title": " 3411 Ma"}, {"color": "#d95f02", "font": {"color": "white"}, "id": "Carnotite", "label": "Carnotite", "shape": "dot", "size": 29.111702127659576, "title": " 2390 Ma"}, {"color": "#d95f02", "font": {"color": "white"}, "id": "Hectorite", "label": "Hectorite", "shape": "dot", "size": 12.48244680851064, "title": " 551 Ma"}, {"color": "#d95f02", "font": {"color": "white"}, "id": "Malachite", "label": "Malachite", "shape": "dot", "size": 43.670212765957444, "title": " 4000 Ma"}, {"color": "#d95f02", "font": {"color": "white"}, "id": "Montmorillonite", "label": "Montmorillonite", "shape": "dot", "size": 48.80285638297872, "title": " 4567.61 Ma"}, {"color": "#d95f02", "font": {"color": "white"}, "id": "Muscovite", "label": "Muscovite", "shape": "dot", "size": 43.670212765957444, "title": " 4000 Ma"}, {"color": "#d95f02", "font": {"color": "white"}, "id": "Parauranophane", "label": "Parauranophane", "shape": "dot", "size": 33.361702127659576, "title": " 2860 Ma"}, {"color": "#d95f02", "font": {"color": "white"}, "id": "Sanidine", "label": "Sanidine", "shape": "dot", "size": 35.81340957446809, "title": " 3131.13 Ma"}, {"color": "#d95f02", "font": {"color": "white"}, "id": "Saponite", "label": "Saponite", "shape": "dot", "size": 36.43617021276596, "title": " 3200 Ma"}, {"color": "#d95f02", "font": {"color": "white"}, "id": "Uranophane", "label": "Uranophane", "shape": "dot", "size": 38.344148936170214, "title": " 3411 Ma"}, {"color": "#7570b3", "font": {"color": "white"}, "id": "Bertrandite", "label": "Bertrandite", "shape": "dot", "size": 33.13563829787234, "title": " 2835 Ma"}, {"color": "#7570b3", "font": {"color": "white"}, "id": "Topaz", "label": "Topaz", "shape": "dot", "size": 35.32393617021277, "title": " 3077 Ma"}, {"color": "#7570b3", "font": {"color": "white"}, "id": "Weeksite", "label": "Weeksite", "shape": "dot", "size": 18.86648936170213, "title": " 1257 Ma"}, {"color": "#e7298a", "font": {"color": "white"}, "id": "Chalcopyrite", "label": "Chalcopyrite", "shape": "dot", "size": 43.670212765957444, "title": " 4000 Ma"}, {"color": "#e7298a", "font": {"color": "white"}, "id": "Cristobalite", "label": "Cristobalite", "shape": "dot", "size": 49.27659574468085, "title": " 4620 Ma"}, {"color": "#e7298a", "font": {"color": "white"}, "id": "Pyrolusite", "label": "Pyrolusite", "shape": "dot", "size": 34.3563829787234, "title": " 2970 Ma"}, {"color": "#66a61e", "font": {"color": "white"}, "id": "Beryl", "label": "Beryl", "shape": "dot", "size": 35.02553191489361, "title": " 3044 Ma"}, {"color": "#66a61e", "font": {"color": "white"}, "id": "Calcite", "label": "Calcite", "shape": "dot", "size": 50.0, "title": " 4700 Ma"}, {"color": "#66a61e", "font": {"color": "white"}, "id": "Dolomite", "label": "Dolomite", "shape": "dot", "size": 50.0, "title": " 4700 Ma"}, {"color": "#66a61e", "font": {"color": "white"}, "id": "Hematite", "label": "Hematite", "shape": "dot", "size": 49.27659574468085, "title": " 4620 Ma"}, {"color": "#66a61e", "font": {"color": "white"}, "id": "Quartz", "label": "Quartz", "shape": "dot", "size": 46.65425531914893, "title": " 4330 Ma"}, {"color": "#e6ab02", "font": {"color": "white"}, "id": "Fluorite", "label": "Fluorite", "shape": "dot", "size": 43.670212765957444, "title": " 4000 Ma"}, {"color": "#e6ab02", "font": {"color": "white"}, "id": "Gold", "label": "Gold", "shape": "dot", "size": 43.670212765957444, "title": " 4000 Ma"}, {"color": "#e6ab02", "font": {"color": "white"}, "id": "Magnetite", "label": "Magnetite", "shape": "dot", "size": 50.0, "title": " 4700 Ma"}, {"color": "#e6ab02", "font": {"color": "white"}, "id": "Pyrite", "label": "Pyrite", "shape": "dot", "size": 43.670212765957444, "title": " 4000 Ma"}, {"color": "#a6761d", "font": {"color": "white"}, "id": "Opal", "label": "Opal", "shape": "dot", "size": 43.670212765957444, "title": " 4000 Ma"}, {"color": "gray", "font": {"color": "white"}, "id": "Al2Si2O5(OH)4", "label": "Al2Si2O5(OH)4", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "K2(UO2)2(VO4)2\u00b73H2O", "label": "K2(UO2)2(VO4)2\u00b73H2O", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Na0.3(Mg,Li)3Si4O10(F,OH)2\u00b7nH2O", "label": "Na0.3(Mg,Li)3Si4O10(F,OH)2\u00b7nH2O", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Cu2(CO3)(OH)2", "label": "Cu2(CO3)(OH)2", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "(Na,Ca)0.3(Al,Mg)2Si4O10(OH)2\u00b7nH2O", "label": "(Na,Ca)0.3(Al,Mg)2Si4O10(OH)2\u00b7nH2O", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "KAl2(Si3Al)O10(OH)2", "label": "KAl2(Si3Al)O10(OH)2", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Ca(UO2)2(SiO3OH)2\u00b75H2O", "label": "Ca(UO2)2(SiO3OH)2\u00b75H2O", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "K(AlSi3O8)", "label": "K(AlSi3O8)", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "(Ca,Na)0.3(Mg,Fe)3(Si,Al)4O10(OH)2\u00b74H2O", "label": "(Ca,Na)0.3(Mg,Fe)3(Si,Al)4O10(OH)2\u00b74H2O", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Be4Si2O7(OH)2", "label": "Be4Si2O7(OH)2", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Al2SiO4F2", "label": "Al2SiO4F2", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "(K)2(UO2)2(Si5O13)\u00b74H2O", "label": "(K)2(UO2)2(Si5O13)\u00b74H2O", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "CuFeS2", "label": "CuFeS2", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "SiO2", "label": "SiO2", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "MnO2", "label": "MnO2", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Be3Al2Si6O18", "label": "Be3Al2Si6O18", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Ca(CO3)", "label": "Ca(CO3)", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "CaMg(CO3)2", "label": "CaMg(CO3)2", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Fe2O3", "label": "Fe2O3", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "CaF2", "label": "CaF2", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Au", "label": "Au", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Fe2+Fe3+2O4", "label": "Fe2+Fe3+2O4", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "FeS2", "label": "FeS2", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "SiO2\u00b7nH2O", "label": "SiO2\u00b7nH2O", "shape": "ellipse"}, {"color": "lightgray", "font": {"color": "white"}, "id": "Al", "label": "Al", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "Si", "label": "Si", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "O", "label": "O", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "H", "label": "H", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "K", "label": "K", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "U", "label": "U", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "V", "label": "V", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "Na", "label": "Na", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "Mg", "label": "Mg", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "Li", "label": "Li", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "F", "label": "F", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "Cu", "label": "Cu", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "C", "label": "C", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "Ca", "label": "Ca", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "Fe", "label": "Fe", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "Be", "label": "Be", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "S", "label": "S", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "Mn", "label": "Mn", "shape": "diamond"}]);
+                  edges = new vis.DataSet([{"from": "Kaolinite", "to": "Al2Si2O5(OH)4"}, {"from": "Carnotite", "to": "K2(UO2)2(VO4)2\u00b73H2O"}, {"from": "Hectorite", "to": "Na0.3(Mg,Li)3Si4O10(F,OH)2\u00b7nH2O"}, {"from": "Malachite", "to": "Cu2(CO3)(OH)2"}, {"from": "Montmorillonite", "to": "(Na,Ca)0.3(Al,Mg)2Si4O10(OH)2\u00b7nH2O"}, {"from": "Muscovite", "to": "KAl2(Si3Al)O10(OH)2"}, {"from": "Parauranophane", "to": "Ca(UO2)2(SiO3OH)2\u00b75H2O"}, {"from": "Sanidine", "to": "K(AlSi3O8)"}, {"from": "Saponite", "to": "(Ca,Na)0.3(Mg,Fe)3(Si,Al)4O10(OH)2\u00b74H2O"}, {"from": "Uranophane", "to": "Ca(UO2)2(SiO3OH)2\u00b75H2O"}, {"from": "Bertrandite", "to": "Be4Si2O7(OH)2"}, {"from": "Topaz", "to": "Al2SiO4F2"}, {"from": "Weeksite", "to": "(K)2(UO2)2(Si5O13)\u00b74H2O"}, {"from": "Chalcopyrite", "to": "CuFeS2"}, {"from": "Cristobalite", "to": "SiO2"}, {"from": "Pyrolusite", "to": "MnO2"}, {"from": "Beryl", "to": "Be3Al2Si6O18"}, {"from": "Calcite", "to": "Ca(CO3)"}, {"from": "Dolomite", "to": "CaMg(CO3)2"}, {"from": "Hematite", "to": "Fe2O3"}, {"from": "Quartz", "to": "SiO2"}, {"from": "Fluorite", "to": "CaF2"}, {"from": "Gold", "to": "Au"}, {"from": "Magnetite", "to": "Fe2+Fe3+2O4"}, {"from": "Pyrite", "to": "FeS2"}, {"from": "Opal", "to": "SiO2\u00b7nH2O"}, {"from": "Kaolinite", "to": "Al"}, {"from": "Kaolinite", "to": "Si"}, {"from": "Kaolinite", "to": "O"}, {"from": "Kaolinite", "to": "H"}, {"from": "Carnotite", "to": "K"}, {"from": "Carnotite", "to": "U"}, {"from": "Carnotite", "to": "O"}, {"from": "Carnotite", "to": "V"}, {"from": "Carnotite", "to": "H"}, {"from": "Hectorite", "to": "Na"}, {"from": "Hectorite", "to": "Mg"}, {"from": "Hectorite", "to": "Li"}, {"from": "Hectorite", "to": "Si"}, {"from": "Hectorite", "to": "O"}, {"from": "Hectorite", "to": "F"}, {"from": "Hectorite", "to": "H"}, {"from": "Malachite", "to": "Cu"}, {"from": "Malachite", "to": "C"}, {"from": "Malachite", "to": "O"}, {"from": "Malachite", "to": "H"}, {"from": "Montmorillonite", "to": "Na"}, {"from": "Montmorillonite", "to": "Ca"}, {"from": "Montmorillonite", "to": "Al"}, {"from": "Montmorillonite", "to": "Mg"}, {"from": "Montmorillonite", "to": "Si"}, {"from": "Montmorillonite", "to": "O"}, {"from": "Montmorillonite", "to": "H"}, {"from": "Muscovite", "to": "K"}, {"from": "Muscovite", "to": "Al"}, {"from": "Muscovite", "to": "Si"}, {"from": "Muscovite", "to": "O"}, {"from": "Muscovite", "to": "H"}, {"from": "Parauranophane", "to": "Ca"}, {"from": "Parauranophane", "to": "U"}, {"from": "Parauranophane", "to": "O"}, {"from": "Parauranophane", "to": "Si"}, {"from": "Parauranophane", "to": "H"}, {"from": "Sanidine", "to": "K"}, {"from": "Sanidine", "to": "Al"}, {"from": "Sanidine", "to": "Si"}, {"from": "Sanidine", "to": "O"}, {"from": "Saponite", "to": "Ca"}, {"from": "Saponite", "to": "Na"}, {"from": "Saponite", "to": "Mg"}, {"from": "Saponite", "to": "Fe"}, {"from": "Saponite", "to": "Si"}, {"from": "Saponite", "to": "Al"}, {"from": "Saponite", "to": "O"}, {"from": "Saponite", "to": "H"}, {"from": "Uranophane", "to": "Ca"}, {"from": "Uranophane", "to": "U"}, {"from": "Uranophane", "to": "O"}, {"from": "Uranophane", "to": "Si"}, {"from": "Uranophane", "to": "H"}, {"from": "Bertrandite", "to": "Be"}, {"from": "Bertrandite", "to": "Si"}, {"from": "Bertrandite", "to": "O"}, {"from": "Bertrandite", "to": "H"}, {"from": "Topaz", "to": "Al"}, {"from": "Topaz", "to": "Si"}, {"from": "Topaz", "to": "O"}, {"from": "Topaz", "to": "F"}, {"from": "Weeksite", "to": "K"}, {"from": "Weeksite", "to": "U"}, {"from": "Weeksite", "to": "O"}, {"from": "Weeksite", "to": "Si"}, {"from": "Weeksite", "to": "H"}, {"from": "Chalcopyrite", "to": "Cu"}, {"from": "Chalcopyrite", "to": "Fe"}, {"from": "Chalcopyrite", "to": "S"}, {"from": "Cristobalite", "to": "Si"}, {"from": "Cristobalite", "to": "O"}, {"from": "Pyrolusite", "to": "Mn"}, {"from": "Pyrolusite", "to": "O"}, {"from": "Beryl", "to": "Be"}, {"from": "Beryl", "to": "Al"}, {"from": "Beryl", "to": "Si"}, {"from": "Beryl", "to": "O"}, {"from": "Calcite", "to": "Ca"}, {"from": "Calcite", "to": "C"}, {"from": "Calcite", "to": "O"}, {"from": "Dolomite", "to": "Ca"}, {"from": "Dolomite", "to": "Mg"}, {"from": "Dolomite", "to": "C"}, {"from": "Dolomite", "to": "O"}, {"from": "Hematite", "to": "Fe"}, {"from": "Hematite", "to": "O"}, {"from": "Quartz", "to": "Si"}, {"from": "Quartz", "to": "O"}, {"from": "Fluorite", "to": "Ca"}, {"from": "Fluorite", "to": "F"}, {"from": "Magnetite", "to": "Fe"}, {"from": "Magnetite", "to": "O"}, {"from": "Pyrite", "to": "Fe"}, {"from": "Pyrite", "to": "S"}, {"from": "Opal", "to": "Si"}, {"from": "Opal", "to": "O"}, {"from": "Opal", "to": "H"}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

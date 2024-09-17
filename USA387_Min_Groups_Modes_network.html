@@ -1,0 +1,325 @@
+
+    <div style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); color: white; font-size: 14px; font-weight: bold; z-index: 9999;">
+        USA387 Minerals, Structural Groups, & Paragenetic Modes Network
+    </div>
+    
+    <div style="position: absolute; top: 10px; right: 10px; background-color: white; padding: 5px; border-radius: 5px; z-index: 9999; width: 90;">
+        <h4 style="margin: 0 0 5px 0; font-size: 10px;">Crystal Systems</h4>
+    <span style="background-color: #1b9e77; padding: 3px; color: black; margin-right: 5px; font-size: 10px;">Triclinic</span><br><span style="background-color: #d95f02; padding: 3px; color: black; margin-right: 5px; font-size: 10px;">Monoclinic</span><br><span style="background-color: #7570b3; padding: 3px; color: black; margin-right: 5px; font-size: 10px;">Orthorhombic</span><br><span style="background-color: #e7298a; padding: 3px; color: black; margin-right: 5px; font-size: 10px;">Tetragonal</span><br><span style="background-color: #66a61e; padding: 3px; color: black; margin-right: 5px; font-size: 10px;">Hexagonal</span><br><span style="background-color: #e6ab02; padding: 3px; color: black; margin-right: 5px; font-size: 10px;">Cubic</span><br><span style="background-color: #a6761d; padding: 3px; color: black; margin-right: 5px; font-size: 10px;">Amorphous </span><br><span style="background-color: #666666; padding: 3px; color: black; margin-right: 5px; font-size: 10px;">Not Applicable</span><br></div>
+    <div style="position: absolute; top: 60px; left: 10px; background-color: white; padding: 5px; border-radius: 5px; z-index: 9999; width: 90px;">
+        <h4 style="margin: 0 0 5px 0; font-size: 10px;">Oldest Known Mineral Age (Ma)</h4>
+    
+        <div style="display: flex; align-items: center; margin-bottom: 5px;">
+            <div style="width: 5px; height: 5px; border-radius: 50%; background-color: gray; margin-right: 10px;"></div>
+            <span style="font-size: 10px;">0</span>
+        </div>
+        
+        <div style="display: flex; align-items: center; margin-bottom: 5px;">
+            <div style="width: 12.5px; height: 12.5px; border-radius: 50%; background-color: gray; margin-right: 10px;"></div>
+            <span style="font-size: 10px;">1175</span>
+        </div>
+        
+        <div style="display: flex; align-items: center; margin-bottom: 5px;">
+            <div style="width: 20.0px; height: 20.0px; border-radius: 50%; background-color: gray; margin-right: 10px;"></div>
+            <span style="font-size: 10px;">2350</span>
+        </div>
+        
+        <div style="display: flex; align-items: center; margin-bottom: 5px;">
+            <div style="width: 27.5px; height: 27.5px; border-radius: 50%; background-color: gray; margin-right: 10px;"></div>
+            <span style="font-size: 10px;">3525</span>
+        </div>
+        
+        <div style="display: flex; align-items: center; margin-bottom: 5px;">
+            <div style="width: 35.0px; height: 35.0px; border-radius: 50%; background-color: gray; margin-right: 10px;"></div>
+            <span style="font-size: 10px;">4700</span>
+        </div>
+        
+    <div style="display: flex; align-items: center; margin-bottom: 5px;">
+        <div style="width: 20px; height: 20px; border-radius: 50%; border: 2px solid black; background-color: white; margin-right: 10px;"></div>
+        <span style="font-size: 10px;">No Size Data</span>
+    </div>
+    </div>
+    <script type="text/javascript">
+        var network = null;
+        function togglePhysics() {
+            if (network === null) {
+                network = this.vis.Network(document.getElementById('mynetwork'), data, options);
+            }
+            var physicsEnabled = network.physics.options.enabled;
+            network.setOptions({
+                physics: {
+                    enabled: !physicsEnabled,
+                    stabilization: {
+                        enabled: true
+                    },
+                    solver: 'forceAtlas2Based',
+                    forceAtlas2Based: {
+                        gravitationalConstant: -50,
+                        centralGravity: 0.01,
+                        springLength: 80,
+                        springConstant: 0.08
+                    },
+                    barnesHut: {
+                        gravitationalConstant: -50,
+                        centralGravity: 0.01,
+                        springLength: 80,
+                        springConstant: 0.08
+                    }
+                }
+            });
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('togglePhysics').addEventListener('click', togglePhysics);
+        });
+    </script>
+    <button id="togglePhysics" style="position: absolute; top: 10px; left: 10px; background-color: #007bff; color: white; font-size: 11px; border: none; padding: 10px; border-radius: 5px; cursor: pointer; z-index: 9999;">Toggle Physics</button>
+    <html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 800px;
+                 background-color: black;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+             #loadingBar {
+                 position:absolute;
+                 top:0px;
+                 left:0px;
+                 width: 100%;
+                 height: 800px;
+                 background-color:rgba(200,200,200,0.8);
+                 -webkit-transition: all 0.5s ease;
+                 -moz-transition: all 0.5s ease;
+                 -ms-transition: all 0.5s ease;
+                 -o-transition: all 0.5s ease;
+                 transition: all 0.5s ease;
+                 opacity:1;
+             }
+
+             #bar {
+                 position:absolute;
+                 top:0px;
+                 left:0px;
+                 width:20px;
+                 height:20px;
+                 margin:auto auto auto auto;
+                 border-radius:11px;
+                 border:2px solid rgba(30,30,30,0.05);
+                 background: rgb(0, 173, 246); /* Old browsers */
+                 box-shadow: 2px 0px 4px rgba(0,0,0,0.4);
+             }
+
+             #border {
+                 position:absolute;
+                 top:10px;
+                 left:10px;
+                 width:500px;
+                 height:23px;
+                 margin:auto auto auto auto;
+                 box-shadow: 0px 0px 4px rgba(0,0,0,0.2);
+                 border-radius:10px;
+             }
+
+             #text {
+                 position:absolute;
+                 top:8px;
+                 left:530px;
+                 width:30px;
+                 height:50px;
+                 margin:auto auto auto auto;
+                 font-size:22px;
+                 color: #000000;
+             }
+
+             div.outerBorder {
+                 position:relative;
+                 top:400px;
+                 width:600px;
+                 height:44px;
+                 margin:auto auto auto auto;
+                 border:8px solid rgba(0,0,0,0.1);
+                 background: rgb(252,252,252); /* Old browsers */
+                 background: -moz-linear-gradient(top,  rgba(252,252,252,1) 0%, rgba(237,237,237,1) 100%); /* FF3.6+ */
+                 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,252,252,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
+                 background: -webkit-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
+                 background: -o-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Opera 11.10+ */
+                 background: -ms-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* IE10+ */
+                 background: linear-gradient(to bottom,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* W3C */
+                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+                 border-radius:72px;
+                 box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+             }
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+            <div id="loadingBar">
+              <div class="outerBorder">
+                <div id="text">0%</div>
+                <div id="border">
+                  <div id="bar"></div>
+                </div>
+              </div>
+            </div>
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#1b9e77", "font": {"color": "white"}, "id": "Copiapite", "label": "Copiapite", "shape": "dot", "size": 31.354255319148937, "title": " 2638 Ma"}, {"color": "#1b9e77", "font": {"color": "white"}, "id": "Kaolinite", "label": "Kaolinite", "shape": "dot", "size": 38.344148936170214, "title": " 3411 Ma"}, {"color": "#d95f02", "font": {"color": "white"}, "id": "Buddingtonite", "label": "Buddingtonite", "shape": "dot", "size": 23.426648936170213, "title": " 1761.3 Ma"}, {"color": "#d95f02", "font": {"color": "white"}, "id": "Chapmanite", "label": "Chapmanite", "shape": "dot", "size": 27.6006914893617, "title": " 2222.9 Ma"}, {"color": "#d95f02", "font": {"color": "white"}, "id": "Gypsum", "label": "Gypsum", "shape": "dot", "size": 50.0, "title": " 4700 Ma"}, {"color": "#d95f02", "font": {"color": "white"}, "id": "Kleinite", "label": "Kleinite", "shape": "dot", "size": 10.701063829787234, "title": " 354 Ma"}, {"color": "#d95f02", "font": {"color": "white"}, "id": "Melanterite", "label": "Melanterite", "shape": "dot", "size": 36.43617021276596, "title": " 3200 Ma"}, {"borderWidth": 2.0, "color": {"background": "#d95f02", "border": "brown"}, "font": {"color": "white"}, "id": "Mikecoxite", "label": "Mikecoxite", "shape": "dot", "size": 10}, {"color": "#d95f02", "font": {"color": "white"}, "id": "Montmorillonite", "label": "Montmorillonite", "shape": "dot", "size": 48.80285638297872, "title": " 4567.61 Ma"}, {"color": "#d95f02", "font": {"color": "white"}, "id": "Radtkeite", "label": "Radtkeite", "shape": "dot", "size": 7.6455851063829785, "title": " 16.1 Ma"}, {"color": "#d95f02", "font": {"color": "white"}, "id": "Realgar", "label": "Realgar", "shape": "dot", "size": 32.96382978723405, "title": " 2816 Ma"}, {"color": "#d95f02", "font": {"color": "white"}, "id": "Terlinguaite", "label": "Terlinguaite", "shape": "dot", "size": 11.261702127659575, "title": " 416 Ma"}, {"color": "#d95f02", "font": {"color": "white"}, "id": "Tridymite", "label": "Tridymite", "shape": "dot", "size": 35.81340957446809, "title": " 3131.13 Ma"}, {"color": "#7570b3", "font": {"color": "white"}, "id": "Baryte", "label": "Baryte", "shape": "dot", "size": 48.80285638297872, "title": " 4567.61 Ma"}, {"color": "#7570b3", "font": {"color": "white"}, "id": "Goethite", "label": "Goethite", "shape": "dot", "size": 49.27659574468085, "title": " 4620 Ma"}, {"color": "#7570b3", "font": {"color": "white"}, "id": "Kenhsuite", "label": "Kenhsuite", "shape": "dot", "size": 8.295744680851064, "title": " 88 Ma"}, {"color": "#7570b3", "font": {"color": "white"}, "id": "Marcasite", "label": "Marcasite", "shape": "dot", "size": 43.670212765957444, "title": " 4000 Ma"}, {"color": "#7570b3", "font": {"color": "white"}, "id": "Montroydite", "label": "Montroydite", "shape": "dot", "size": 10.805053191489362, "title": " 365.5 Ma"}, {"color": "#7570b3", "font": {"color": "white"}, "id": "Stibnite", "label": "Stibnite", "shape": "dot", "size": 43.670212765957444, "title": " 4000 Ma"}, {"color": "#7570b3", "font": {"color": "white"}, "id": "Terlinguacreekite", "label": "Terlinguacreekite", "shape": "dot", "size": 7.843617021276596, "title": " 38 Ma"}, {"color": "#e7298a", "font": {"color": "white"}, "id": "Calomel", "label": "Calomel", "shape": "dot", "size": 11.385585106382978, "title": " 429.7 Ma"}, {"color": "#e7298a", "font": {"color": "white"}, "id": "Cristobalite", "label": "Cristobalite", "shape": "dot", "size": 49.27659574468085, "title": " 4620 Ma"}, {"color": "#e7298a", "font": {"color": "white"}, "id": "Tripuhyite", "label": "Tripuhyite", "shape": "dot", "size": 31.824468085106382, "title": " 2690 Ma"}, {"color": "#66a61e", "font": {"color": "white"}, "id": "Alunite", "label": "Alunite", "shape": "dot", "size": 36.43617021276596, "title": " 3200 Ma"}, {"color": "#66a61e", "font": {"color": "white"}, "id": "Calcite", "label": "Calcite", "shape": "dot", "size": 50.0, "title": " 4700 Ma"}, {"color": "#66a61e", "font": {"color": "white"}, "id": "Cinnabar", "label": "Cinnabar", "shape": "dot", "size": 43.670212765957444, "title": " 4000 Ma"}, {"color": "#66a61e", "font": {"color": "white"}, "id": "Fibroferrite", "label": "Fibroferrite", "shape": "dot", "size": 33.361702127659576, "title": " 2860 Ma"}, {"color": "#66a61e", "font": {"color": "white"}, "id": "Hematite", "label": "Hematite", "shape": "dot", "size": 49.27659574468085, "title": " 4620 Ma"}, {"color": "#66a61e", "font": {"color": "white"}, "id": "Jarosite", "label": "Jarosite", "shape": "dot", "size": 43.670212765957444, "title": " 4000 Ma"}, {"color": "#66a61e", "font": {"color": "white"}, "id": "Lithiophorite", "label": "Lithiophorite", "shape": "dot", "size": 31.26382978723404, "title": " 2628 Ma"}, {"color": "#66a61e", "font": {"color": "white"}, "id": "Quartz", "label": "Quartz", "shape": "dot", "size": 46.65425531914893, "title": " 4330 Ma"}, {"color": "#66a61e", "font": {"color": "white"}, "id": "Schuetteite", "label": "Schuetteite", "shape": "dot", "size": 7.5, "title": " 0 Ma"}, {"color": "#e6ab02", "font": {"color": "white"}, "id": "Corderoite", "label": "Corderoite", "shape": "dot", "size": 10.805053191489362, "title": " 365.5 Ma"}, {"color": "#e6ab02", "font": {"color": "white"}, "id": "Eglestonite", "label": "Eglestonite", "shape": "dot", "size": 33.72340425531915, "title": " 2900 Ma"}, {"color": "#e6ab02", "font": {"color": "white"}, "id": "Fluorite", "label": "Fluorite", "shape": "dot", "size": 43.670212765957444, "title": " 4000 Ma"}, {"color": "#e6ab02", "font": {"color": "white"}, "id": "Pyrite", "label": "Pyrite", "shape": "dot", "size": 43.670212765957444, "title": " 4000 Ma"}, {"color": "#a6761d", "font": {"color": "white"}, "id": "Opal", "label": "Opal", "shape": "dot", "size": 43.670212765957444, "title": " 4000 Ma"}, {"color": "#666666", "font": {"color": "white"}, "id": "Mercury", "label": "Mercury", "shape": "dot", "size": 33.72340425531915, "title": " 2900 Ma"}, {"color": "gray", "font": {"color": "white"}, "id": "Copiapite ", "label": "Copiapite ", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Clay ", "label": "Clay ", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Kaolinite ", "label": "Kaolinite ", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Feldspar ", "label": "Feldspar ", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Gypsum ", "label": "Gypsum ", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Melanterite ", "label": "Melanterite ", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Smectite-Vermiculite ", "label": "Smectite-Vermiculite ", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Tridymite ", "label": "Tridymite ", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Baryte ", "label": "Baryte ", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Diaspore ", "label": "Diaspore ", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Marcasite ", "label": "Marcasite ", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Stibnite ", "label": "Stibnite ", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Calomel ", "label": "Calomel ", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Cristobalite ", "label": "Cristobalite ", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Rutile ", "label": "Rutile ", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Alunite-Alunite ", "label": "Alunite-Alunite ", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Calcite ", "label": "Calcite ", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Fibroferrite ", "label": "Fibroferrite ", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Corundum ", "label": "Corundum ", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Quartz ", "label": "Quartz ", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Fluorite ", "label": "Fluorite ", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Pyrite ", "label": "Pyrite ", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Amorphous ", "label": "Amorphous ", "shape": "ellipse"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM45", "label": "PM45", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM47", "label": "PM47", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM50", "label": "PM50", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM54", "label": "PM54", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM16", "label": "PM16", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM22", "label": "PM22", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM24", "label": "PM24", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM48", "label": "PM48", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM53", "label": "PM53", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM9", "label": "PM9", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM23", "label": "PM23", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM33", "label": "PM33", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM6", "label": "PM6", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM21", "label": "PM21", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM25", "label": "PM25", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM49", "label": "PM49", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM55", "label": "PM55", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM46", "label": "PM46", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM56", "label": "PM56", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM11", "label": "PM11", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM12", "label": "PM12", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM14", "label": "PM14", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM4", "label": "PM4", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM5", "label": "PM5", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM10", "label": "PM10", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM20", "label": "PM20", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM26", "label": "PM26", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM17", "label": "PM17", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM32", "label": "PM32", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM36", "label": "PM36", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM57", "label": "PM57", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM15", "label": "PM15", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM37", "label": "PM37", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM8", "label": "PM8", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM51", "label": "PM51", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM7", "label": "PM7", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM28", "label": "PM28", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM31", "label": "PM31", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM35", "label": "PM35", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM40", "label": "PM40", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM44", "label": "PM44", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM34", "label": "PM34", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM3", "label": "PM3", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM19", "label": "PM19", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM43", "label": "PM43", "shape": "diamond"}, {"color": "lightgray", "font": {"color": "white"}, "id": "PM38", "label": "PM38", "shape": "diamond"}]);
+                  edges = new vis.DataSet([{"from": "Copiapite", "to": "Copiapite "}, {"from": "Kaolinite", "to": "Clay "}, {"from": "Kaolinite", "to": "Kaolinite "}, {"from": "Buddingtonite", "to": "Feldspar "}, {"from": "Gypsum", "to": "Gypsum "}, {"from": "Melanterite", "to": "Melanterite "}, {"from": "Montmorillonite", "to": "Clay "}, {"from": "Montmorillonite", "to": "Smectite-Vermiculite "}, {"from": "Tridymite", "to": "Tridymite "}, {"from": "Baryte", "to": "Baryte "}, {"from": "Goethite", "to": "Diaspore "}, {"from": "Marcasite", "to": "Marcasite "}, {"from": "Stibnite", "to": "Stibnite "}, {"from": "Calomel", "to": "Calomel "}, {"from": "Cristobalite", "to": "Cristobalite "}, {"from": "Tripuhyite", "to": "Rutile "}, {"from": "Alunite", "to": "Alunite-Alunite "}, {"from": "Calcite", "to": "Calcite "}, {"from": "Fibroferrite", "to": "Fibroferrite "}, {"from": "Hematite", "to": "Corundum "}, {"from": "Jarosite", "to": "Alunite-Alunite "}, {"from": "Quartz", "to": "Quartz "}, {"from": "Fluorite", "to": "Fluorite "}, {"from": "Pyrite", "to": "Pyrite "}, {"from": "Opal", "to": "Amorphous "}, {"from": "Copiapite", "to": "PM45"}, {"from": "Copiapite", "to": "PM47"}, {"from": "Copiapite", "to": "PM50"}, {"from": "Copiapite", "to": "PM54"}, {"from": "Kaolinite", "to": "PM16"}, {"from": "Kaolinite", "to": "PM22"}, {"from": "Kaolinite", "to": "PM24"}, {"from": "Kaolinite", "to": "PM47"}, {"from": "Kaolinite", "to": "PM48"}, {"from": "Kaolinite", "to": "PM53"}, {"from": "Buddingtonite", "to": "PM9"}, {"from": "Buddingtonite", "to": "PM23"}, {"from": "Buddingtonite", "to": "PM53"}, {"from": "Chapmanite", "to": "PM23"}, {"from": "Chapmanite", "to": "PM33"}, {"from": "Gypsum", "to": "PM6"}, {"from": "Gypsum", "to": "PM21"}, {"from": "Gypsum", "to": "PM25"}, {"from": "Gypsum", "to": "PM45"}, {"from": "Gypsum", "to": "PM47"}, {"from": "Gypsum", "to": "PM48"}, {"from": "Gypsum", "to": "PM49"}, {"from": "Gypsum", "to": "PM50"}, {"from": "Gypsum", "to": "PM54"}, {"from": "Gypsum", "to": "PM55"}, {"from": "Kleinite", "to": "PM33"}, {"from": "Kleinite", "to": "PM46"}, {"from": "Kleinite", "to": "PM47"}, {"from": "Melanterite", "to": "PM45"}, {"from": "Melanterite", "to": "PM47"}, {"from": "Melanterite", "to": "PM49"}, {"from": "Melanterite", "to": "PM50"}, {"from": "Melanterite", "to": "PM54"}, {"from": "Melanterite", "to": "PM56"}, {"from": "Mikecoxite", "to": "PM53"}, {"from": "Montmorillonite", "to": "PM6"}, {"from": "Montmorillonite", "to": "PM16"}, {"from": "Montmorillonite", "to": "PM22"}, {"from": "Montmorillonite", "to": "PM47"}, {"from": "Radtkeite", "to": "PM25"}, {"from": "Radtkeite", "to": "PM33"}, {"from": "Radtkeite", "to": "PM47"}, {"from": "Realgar", "to": "PM11"}, {"from": "Realgar", "to": "PM12"}, {"from": "Realgar", "to": "PM14"}, {"from": "Realgar", "to": "PM24"}, {"from": "Realgar", "to": "PM33"}, {"from": "Realgar", "to": "PM50"}, {"from": "Realgar", "to": "PM54"}, {"from": "Terlinguaite", "to": "PM47"}, {"from": "Tridymite", "to": "PM4"}, {"from": "Tridymite", "to": "PM5"}, {"from": "Tridymite", "to": "PM9"}, {"from": "Tridymite", "to": "PM10"}, {"from": "Tridymite", "to": "PM20"}, {"from": "Tridymite", "to": "PM26"}, {"from": "Tridymite", "to": "PM50"}, {"from": "Tridymite", "to": "PM54"}, {"from": "Baryte", "to": "PM6"}, {"from": "Baryte", "to": "PM14"}, {"from": "Baryte", "to": "PM17"}, {"from": "Baryte", "to": "PM20"}, {"from": "Baryte", "to": "PM24"}, {"from": "Baryte", "to": "PM25"}, {"from": "Baryte", "to": "PM32"}, {"from": "Baryte", "to": "PM33"}, {"from": "Baryte", "to": "PM36"}, {"from": "Baryte", "to": "PM45"}, {"from": "Baryte", "to": "PM46"}, {"from": "Baryte", "to": "PM47"}, {"from": "Baryte", "to": "PM49"}, {"from": "Baryte", "to": "PM50"}, {"from": "Baryte", "to": "PM53"}, {"from": "Baryte", "to": "PM54"}, {"from": "Baryte", "to": "PM55"}, {"from": "Goethite", "to": "PM14"}, {"from": "Goethite", "to": "PM17"}, {"from": "Goethite", "to": "PM24"}, {"from": "Goethite", "to": "PM47"}, {"from": "Goethite", "to": "PM48"}, {"from": "Goethite", "to": "PM49"}, {"from": "Goethite", "to": "PM53"}, {"from": "Goethite", "to": "PM55"}, {"from": "Goethite", "to": "PM57"}, {"from": "Kenhsuite", "to": "PM33"}, {"from": "Kenhsuite", "to": "PM47"}, {"from": "Marcasite", "to": "PM11"}, {"from": "Marcasite", "to": "PM15"}, {"from": "Marcasite", "to": "PM49"}, {"from": "Marcasite", "to": "PM50"}, {"from": "Marcasite", "to": "PM53"}, {"from": "Marcasite", "to": "PM54"}, {"from": "Marcasite", "to": "PM55"}, {"from": "Montroydite", "to": "PM47"}, {"from": "Stibnite", "to": "PM33"}, {"from": "Stibnite", "to": "PM37"}, {"from": "Stibnite", "to": "PM50"}, {"from": "Stibnite", "to": "PM54"}, {"from": "Terlinguacreekite", "to": "PM47"}, {"from": "Calomel", "to": "PM47"}, {"from": "Cristobalite", "to": "PM4"}, {"from": "Cristobalite", "to": "PM5"}, {"from": "Cristobalite", "to": "PM8"}, {"from": "Cristobalite", "to": "PM9"}, {"from": "Cristobalite", "to": "PM10"}, {"from": "Cristobalite", "to": "PM20"}, {"from": "Cristobalite", "to": "PM50"}, {"from": "Cristobalite", "to": "PM51"}, {"from": "Cristobalite", "to": "PM54"}, {"from": "Tripuhyite", "to": "PM45"}, {"from": "Tripuhyite", "to": "PM47"}, {"from": "Alunite", "to": "PM45"}, {"from": "Alunite", "to": "PM46"}, {"from": "Alunite", "to": "PM47"}, {"from": "Alunite", "to": "PM50"}, {"from": "Alunite", "to": "PM54"}, {"from": "Calcite", "to": "PM6"}, {"from": "Calcite", "to": "PM7"}, {"from": "Calcite", "to": "PM9"}, {"from": "Calcite", "to": "PM10"}, {"from": "Calcite", "to": "PM14"}, {"from": "Calcite", "to": "PM17"}, {"from": "Calcite", "to": "PM21"}, {"from": "Calcite", "to": "PM23"}, {"from": "Calcite", "to": "PM25"}, {"from": "Calcite", "to": "PM28"}, {"from": "Calcite", "to": "PM31"}, {"from": "Calcite", "to": "PM35"}, {"from": "Calcite", "to": "PM36"}, {"from": "Calcite", "to": "PM40"}, {"from": "Calcite", "to": "PM44"}, {"from": "Calcite", "to": "PM45"}, {"from": "Calcite", "to": "PM49"}, {"from": "Cinnabar", "to": "PM6"}, {"from": "Cinnabar", "to": "PM11"}, {"from": "Cinnabar", "to": "PM12"}, {"from": "Cinnabar", "to": "PM33"}, {"from": "Cinnabar", "to": "PM56"}, {"from": "Fibroferrite", "to": "PM25"}, {"from": "Fibroferrite", "to": "PM45"}, {"from": "Fibroferrite", "to": "PM47"}, {"from": "Hematite", "to": "PM9"}, {"from": "Hematite", "to": "PM10"}, {"from": "Hematite", "to": "PM14"}, {"from": "Hematite", "to": "PM15"}, {"from": "Hematite", "to": "PM17"}, {"from": "Hematite", "to": "PM21"}, {"from": "Hematite", "to": "PM24"}, {"from": "Hematite", "to": "PM25"}, {"from": "Hematite", "to": "PM32"}, {"from": "Hematite", "to": "PM40"}, {"from": "Hematite", "to": "PM44"}, {"from": "Hematite", "to": "PM45"}, {"from": "Hematite", "to": "PM47"}, {"from": "Hematite", "to": "PM48"}, {"from": "Hematite", "to": "PM49"}, {"from": "Hematite", "to": "PM53"}, {"from": "Jarosite", "to": "PM45"}, {"from": "Jarosite", "to": "PM46"}, {"from": "Jarosite", "to": "PM47"}, {"from": "Jarosite", "to": "PM49"}, {"from": "Lithiophorite", "to": "PM21"}, {"from": "Lithiophorite", "to": "PM34"}, {"from": "Lithiophorite", "to": "PM47"}, {"from": "Lithiophorite", "to": "PM48"}, {"from": "Quartz", "to": "PM3"}, {"from": "Quartz", "to": "PM5"}, {"from": "Quartz", "to": "PM6"}, {"from": "Quartz", "to": "PM9"}, {"from": "Quartz", "to": "PM10"}, {"from": "Quartz", "to": "PM14"}, {"from": "Quartz", "to": "PM19"}, {"from": "Quartz", "to": "PM23"}, {"from": "Quartz", "to": "PM24"}, {"from": "Quartz", "to": "PM26"}, {"from": "Quartz", "to": "PM34"}, {"from": "Quartz", "to": "PM35"}, {"from": "Quartz", "to": "PM43"}, {"from": "Quartz", "to": "PM49"}, {"from": "Schuetteite", "to": "PM47"}, {"from": "Schuetteite", "to": "PM55"}, {"from": "Corderoite", "to": "PM25"}, {"from": "Corderoite", "to": "PM47"}, {"from": "Eglestonite", "to": "PM47"}, {"from": "Fluorite", "to": "PM19"}, {"from": "Fluorite", "to": "PM23"}, {"from": "Fluorite", "to": "PM26"}, {"from": "Fluorite", "to": "PM31"}, {"from": "Fluorite", "to": "PM32"}, {"from": "Fluorite", "to": "PM34"}, {"from": "Fluorite", "to": "PM35"}, {"from": "Fluorite", "to": "PM36"}, {"from": "Fluorite", "to": "PM49"}, {"from": "Fluorite", "to": "PM50"}, {"from": "Fluorite", "to": "PM53"}, {"from": "Fluorite", "to": "PM54"}, {"from": "Pyrite", "to": "PM6"}, {"from": "Pyrite", "to": "PM11"}, {"from": "Pyrite", "to": "PM12"}, {"from": "Pyrite", "to": "PM15"}, {"from": "Pyrite", "to": "PM17"}, {"from": "Pyrite", "to": "PM19"}, {"from": "Pyrite", "to": "PM23"}, {"from": "Pyrite", "to": "PM24"}, {"from": "Pyrite", "to": "PM25"}, {"from": "Pyrite", "to": "PM26"}, {"from": "Pyrite", "to": "PM33"}, {"from": "Pyrite", "to": "PM36"}, {"from": "Pyrite", "to": "PM37"}, {"from": "Pyrite", "to": "PM38"}, {"from": "Pyrite", "to": "PM40"}, {"from": "Pyrite", "to": "PM44"}, {"from": "Pyrite", "to": "PM47"}, {"from": "Pyrite", "to": "PM49"}, {"from": "Opal", "to": "PM17"}, {"from": "Opal", "to": "PM25"}, {"from": "Opal", "to": "PM45"}, {"from": "Opal", "to": "PM50"}, {"from": "Opal", "to": "PM53"}, {"from": "Opal", "to": "PM54"}, {"from": "Mercury", "to": "PM6"}, {"from": "Mercury", "to": "PM14"}, {"from": "Mercury", "to": "PM33"}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+                      network.on("stabilizationProgress", function(params) {
+                          document.getElementById('loadingBar').removeAttribute("style");
+                          var maxWidth = 496;
+                          var minWidth = 20;
+                          var widthFactor = params.iterations/params.total;
+                          var width = Math.max(minWidth,maxWidth * widthFactor);
+                          document.getElementById('bar').style.width = width + 'px';
+                          document.getElementById('text').innerHTML = Math.round(widthFactor*100) + '%';
+                      });
+                      network.once("stabilizationIterationsDone", function() {
+                          document.getElementById('text').innerHTML = '100%';
+                          document.getElementById('bar').style.width = '496px';
+                          document.getElementById('loadingBar').style.opacity = 0;
+                          // really clean the dom element
+                          setTimeout(function () {document.getElementById('loadingBar').style.display = 'none';}, 500);
+                      });
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>
