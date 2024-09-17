@@ -8,14 +8,15 @@
     <style>
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
         header { background-color: #333; color: white; padding: 20px; text-align: center; }
-        .content { 
-            margin: 20px; 
-            padding: 20px; 
-            background-color: white; 
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+        .content {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             display: flex;
-            justify-content: space-between;
-            align-items: flex-start; /* Align items by the top */
+            justify-content: flex-start; /* Align both text and image to the left */
+            align-items: flex-start; /* Align items at the top */
+            gap: 20px; /* Space between the text and image */
         }
         footer { text-align: center; padding: 10px; background-color: #333; color: white; width: 100%; }
         .page-list { list-style-type: none; padding: 0; }
@@ -23,12 +24,11 @@
         .page-list a { text-decoration: none; color: #333; font-size: 18px; }
         .page-list a:hover { text-decoration: underline; }
         .content img {
-            height: 40%; /* Make the image take up the height of the container */
+            height: 100%; /* Set image to fill the height of the container */
             width: auto; /* Maintain aspect ratio */
-            margin-left: 10px; /* Add some space between the text and the image */
         }
         .text-content {
-            flex-grow: 1; /* Allow the text to take up the remaining space */
+            flex-grow: 1; /* Let the text take up the remaining space */
         }
     </style>
 </head>
@@ -64,11 +64,4 @@
                 <li><a href="page11.html">Spor Mountain Mining District</a></li>
             </ul>
         </div>
-        <img src="Leucogranite.jpg" alt="">
-    </div>
-
-    <footer>
-        <p>&copy; 2024 LMLD Resources</p>
-    </footer>
-</body>
-</html>
+        <img src="your-image.jpg" alt
