@@ -48,10 +48,35 @@
         }
 
         .note {
-            margin-top: 20px; /* Space above the note */
-            font-size: 16px; /* Font size of the note */
-            color: #333; /* Font color of the note */
-            padding-left: 40px; /* Shift text 40 pixels to the right */
+            margin-top: 20px;
+            font-size: 16px;
+            color: #333;
+            padding-left: 40px;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #555;
+        }
+
+        .top-button-container {
+            text-align: right;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -61,6 +86,12 @@
     </header>
 
     <div class="container">
+
+        <!-- Top Back to Home Button -->
+        <div class="top-button-container">
+            <a href="index.html" class="back-button">Back to Home</a>
+        </div>
+
         <table>
             <caption>Table of Paragenetic Modes</caption>
             <thead>
@@ -124,12 +155,4 @@
                 <tr><td>PM52</td><td>Guano- and urine-derived minerals</td></tr>
                 <tr><td>PM53</td><td>Other minerals with taphonomic origins</td></tr>
                 <tr><td>PM54</td><td>Coal and other mine fire minerals</td></tr>
-                <tr><td>PM55</td><td>Anthropogenic mine minerals</td></tr>
-                <tr><td>PM56</td><td>Slag and smelter minerals</td></tr>
-                <tr><td>PM57</td><td>Other minerals formed by human processes</td></tr>
-            </tbody>
-        </table>
-        <p class="note">Modified from Hazen & Morrison, 2022.</p>
-    </div>
-</body>
-</html
+                <tr><td>PM55</td><td>
