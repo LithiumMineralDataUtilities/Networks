@@ -3,9 +3,79 @@
         USA012 Minerals & Chemistry Elements Network
     </div>
     
-    <div style="position: absolute; top: 10px; right: 10px; background-color: white; padding: 5px; border-radius: 5px; z-index: 9999; width: 90;">
-        <h4 style="margin: 0 0 5px 0; font-size: 10px;">Crystal Systems</h4>
-    <span style="background-color: #1b9e77; padding: 3px; color: black; margin-right: 5px; font-size: 10px;">Triclinic</span><br><span style="background-color: #d95f02; padding: 3px; color: black; margin-right: 5px; font-size: 10px;">Monoclinic</span><br><span style="background-color: #7570b3; padding: 3px; color: black; margin-right: 5px; font-size: 10px;">Tetragonal</span><br><span style="background-color: #e7298a; padding: 3px; color: black; margin-right: 5px; font-size: 10px;">Hexagonal</span><br><span style="background-color: #66a61e; padding: 3px; color: black; margin-right: 5px; font-size: 10px;">Cubic</span><br></div>
+    <div style="position: absolute; top: 10px; right: 10px; background-color: white; padding: 5px; border-radius: 5px; z-index: 9999; width: 100px;">
+        <h4 style="margin: 0 0 5px 0; font-size: 12px;">Crystal Systems</h4>
+         
+    
+        <div style="display: flex; align-items: center; margin-bottom: 5px;">
+            <div style="width: 15px; height: 15px; border-radius: 50%; background-color: #1f77b4; margin-right: 5px;"></div>
+            <span style="color: black; font-size: 10px;">Triclinic</span>
+            
+        </div>
+        
+        
+        <div style="display: flex; align-items: center; margin-bottom: 5px;">
+            <div style="width: 15px; height: 15px; border-radius: 50%; background-color: #ff7f0e; margin-right: 5px;"></div>
+            <span style="color: black; font-size: 10px;">Monoclinic</span>
+            
+        </div>
+        
+        
+        <div style="display: flex; align-items: center; margin-bottom: 5px;">
+            <div style="width: 15px; height: 15px; border-radius: 50%; background-color: #2ca02c; margin-right: 5px;"></div>
+            <span style="color: black; font-size: 10px;">Orthorhombic</span>
+            
+        </div>
+        
+        
+        <div style="display: flex; align-items: center; margin-bottom: 5px;">
+            <div style="width: 15px; height: 15px; border-radius: 50%; background-color: #d62728; margin-right: 5px;"></div>
+            <span style="color: black; font-size: 10px;">Tetragonal</span>
+            
+        </div>
+        
+        
+        <div style="display: flex; align-items: center; margin-bottom: 5px;">
+            <div style="width: 15px; height: 15px; border-radius: 50%; background-color: #9467bd; margin-right: 5px;"></div>
+            <span style="color: black; font-size: 10px;">Trigonal</span>
+            
+        </div>
+        
+        
+        <div style="display: flex; align-items: center; margin-bottom: 5px;">
+            <div style="width: 15px; height: 15px; border-radius: 50%; background-color: #17becf; margin-right: 5px;"></div>
+            <span style="color: black; font-size: 10px;">Hexagonal</span>
+            
+        </div>
+        
+        
+        <div style="display: flex; align-items: center; margin-bottom: 5px;">
+            <div style="width: 15px; height: 15px; border-radius: 50%; background-color: #bcbd22; margin-right: 5px;"></div>
+            <span style="color: black; font-size: 10px;">Cubic</span>
+            
+        </div>
+        
+        
+        <div style="display: flex; align-items: center; margin-bottom: 5px;">
+            <div style="width: 15px; height: 15px; border-radius: 50%; background-color: #e377c2; margin-right: 5px;"></div>
+            <span style="color: black; font-size: 10px;">Amorphous</span>
+            
+        </div>
+        
+        
+        <div style="display: flex; align-items: center; margin-bottom: 5px;">
+            <div style="width: 15px; height: 15px; border-radius: 50%; background-color: #8c564b; margin-right: 5px;"></div>
+            <span style="color: black; font-size: 10px;">Unknown</span>
+            
+        </div>
+        
+        
+     <div style="display: flex; align-items: center; margin-bottom: 5px;">
+           
+            <span style="color: black; font-size: 8px;">Nodes with multiple colors indicate polytypes</span>
+            
+        </div>
+        </div>
     <div style="position: absolute; top: 60px; left: 10px; background-color: white; padding: 5px; border-radius: 5px; z-index: 9999; width: 90px;">
         <h4 style="margin: 0 0 5px 0; font-size: 10px;">Oldest Known Mineral Age (Ma)</h4>
     
@@ -54,15 +124,15 @@
                     },
                     solver: 'forceAtlas2Based',
                     forceAtlas2Based: {
-                        gravitationalConstant: -50,
+                        gravitationalConstant: -70,
                         centralGravity: 0.01,
-                        springLength: 80,
+                        springLength: 60,
                         springConstant: 0.08
                     },
                     barnesHut: {
-                        gravitationalConstant: -50,
+                        gravitationalConstant: -70,
                         centralGravity: 0.01,
-                        springLength: 80,
+                        springLength: 60,
                         springConstant: 0.08
                     }
                 }
@@ -163,8 +233,8 @@
                   
 
                   // parsing and collecting nodes and edges from the python
-                  nodes = new vis.DataSet([{"color": "#1b9e77", "font": {"color": "white"}, "id": "Microcline", "label": "Microcline", "shape": "dot", "size": 37.27712765957447, "title": " 3293 Ma"}, {"color": "#d95f02", "font": {"color": "white"}, "id": "Monazite-(Ce)", "label": "Monazite-(Ce)", "shape": "dot", "size": 32.96382978723405, "title": " 2816 Ma"}, {"color": "#d95f02", "font": {"color": "white"}, "id": "Muscovite", "label": "Muscovite", "shape": "dot", "size": 43.670212765957444, "title": " 4000 Ma"}, {"color": "#d95f02", "font": {"color": "white"}, "id": "Spodumene (Hiddenite)", "label": "Spodumene (Hiddenite)", "shape": "dot", "size": 35.32393617021277, "title": " 3077 Ma"}, {"color": "#7570b3", "font": {"color": "white"}, "id": "Cassiterite", "label": "Cassiterite", "shape": "dot", "size": 43.670212765957444, "title": " 4000 Ma"}, {"color": "#7570b3", "font": {"color": "white"}, "id": "Rutile", "label": "Rutile", "shape": "dot", "size": 49.27659574468085, "title": " 4620 Ma"}, {"color": "#e7298a", "font": {"color": "white"}, "id": "Beryl", "label": "Beryl", "shape": "dot", "size": 35.02553191489361, "title": " 3044 Ma"}, {"color": "#e7298a", "font": {"color": "white"}, "id": "Chabazite-Ca", "label": "Chabazite-Ca", "shape": "dot", "size": 25.585106382978722, "title": " 2000 Ma"}, {"color": "#e7298a", "font": {"color": "white"}, "id": "Dolomite", "label": "Dolomite", "shape": "dot", "size": 50.0, "title": " 4700 Ma"}, {"color": "#e7298a", "font": {"color": "white"}, "id": "Hematite", "label": "Hematite", "shape": "dot", "size": 49.27659574468085, "title": " 4620 Ma"}, {"color": "#e7298a", "font": {"color": "white"}, "id": "Quartz", "label": "Quartz", "shape": "dot", "size": 46.65425531914893, "title": " 4330 Ma"}, {"color": "#e7298a", "font": {"color": "white"}, "id": "Siderite", "label": "Siderite", "shape": "dot", "size": 43.670212765957444, "title": " 4000 Ma"}, {"color": "#66a61e", "font": {"color": "white"}, "id": "Pyrite", "label": "Pyrite", "shape": "dot", "size": 43.670212765957444, "title": " 4000 Ma"}, {"color": "gray", "font": {"color": "white"}, "id": "K", "label": "K", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Al", "label": "Al", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Si", "label": "Si", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "O", "label": "O", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Ce", "label": "Ce", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "P", "label": "P", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "H", "label": "H", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Li", "label": "Li", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Sn", "label": "Sn", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Ti", "label": "Ti", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Be", "label": "Be", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Ca", "label": "Ca", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Mg", "label": "Mg", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "C", "label": "C", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Fe", "label": "Fe", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "S", "label": "S", "shape": "ellipse"}]);
-                  edges = new vis.DataSet([{"from": "Microcline", "to": "K"}, {"from": "Microcline", "to": "Al"}, {"from": "Microcline", "to": "Si"}, {"from": "Microcline", "to": "O"}, {"from": "Monazite-(Ce)", "to": "Ce"}, {"from": "Monazite-(Ce)", "to": "P"}, {"from": "Monazite-(Ce)", "to": "O"}, {"from": "Muscovite", "to": "K"}, {"from": "Muscovite", "to": "Al"}, {"from": "Muscovite", "to": "Si"}, {"from": "Muscovite", "to": "O"}, {"from": "Muscovite", "to": "H"}, {"from": "Spodumene (Hiddenite)", "to": "Li"}, {"from": "Spodumene (Hiddenite)", "to": "Al"}, {"from": "Spodumene (Hiddenite)", "to": "Si"}, {"from": "Spodumene (Hiddenite)", "to": "O"}, {"from": "Cassiterite", "to": "Sn"}, {"from": "Cassiterite", "to": "O"}, {"from": "Rutile", "to": "Ti"}, {"from": "Rutile", "to": "O"}, {"from": "Beryl", "to": "Be"}, {"from": "Beryl", "to": "Al"}, {"from": "Beryl", "to": "Si"}, {"from": "Beryl", "to": "O"}, {"from": "Chabazite-Ca", "to": "Ca"}, {"from": "Chabazite-Ca", "to": "Al"}, {"from": "Chabazite-Ca", "to": "Si"}, {"from": "Chabazite-Ca", "to": "O"}, {"from": "Chabazite-Ca", "to": "H"}, {"from": "Dolomite", "to": "Ca"}, {"from": "Dolomite", "to": "Mg"}, {"from": "Dolomite", "to": "C"}, {"from": "Dolomite", "to": "O"}, {"from": "Hematite", "to": "Fe"}, {"from": "Hematite", "to": "O"}, {"from": "Quartz", "to": "Si"}, {"from": "Quartz", "to": "O"}, {"from": "Siderite", "to": "Fe"}, {"from": "Siderite", "to": "C"}, {"from": "Siderite", "to": "O"}, {"from": "Pyrite", "to": "Fe"}, {"from": "Pyrite", "to": "S"}]);
+                  nodes = new vis.DataSet([{"color": "#97c2fc", "font": {"color": "white"}, "id": "Microcline", "image": "./T1.png", "label": "Microcline", "shape": "image", "size": 37.27712765957447, "title": " 3293 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Monazite-(Ce)", "image": "./M.png", "label": "Monazite-(Ce)", "shape": "image", "size": 32.96382978723405, "title": " 2816 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Muscovite", "image": "./MT3.png", "label": "Muscovite", "shape": "image", "size": 43.670212765957444, "title": " 4000 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Spodumene (Hiddenite)", "image": "./M.png", "label": "Spodumene (Hiddenite)", "shape": "image", "size": 35.32393617021277, "title": " 3077 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Cassiterite", "image": "./C.png", "label": "Cassiterite", "shape": "image", "size": 43.670212765957444, "title": " 4000 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Rutile", "image": "./C.png", "label": "Rutile", "shape": "image", "size": 49.27659574468085, "title": " 4620 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Beryl", "image": "./H.png", "label": "Beryl", "shape": "image", "size": 35.02553191489361, "title": " 3044 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Chabazite-Ca", "image": "./T1.png", "label": "Chabazite-Ca", "shape": "image", "size": 25.585106382978722, "title": " 2000 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Dolomite", "image": "./T3.png", "label": "Dolomite", "shape": "image", "size": 50.0, "title": " 4700 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Hematite", "image": "./T3.png", "label": "Hematite", "shape": "image", "size": 49.27659574468085, "title": " 4620 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Quartz", "image": "./T3.png", "label": "Quartz", "shape": "image", "size": 46.65425531914893, "title": " 4330 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Siderite", "image": "./T3.png", "label": "Siderite", "shape": "image", "size": 43.670212765957444, "title": " 4000 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Pyrite", "image": "./C.png", "label": "Pyrite", "shape": "image", "size": 43.670212765957444, "title": " 4000 Ma"}, {"color": "gray", "font": {"color": "white"}, "id": "K", "label": "K", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Al", "label": "Al", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Si", "label": "Si", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "O", "label": "O", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Ce", "label": "Ce", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "P", "label": "P", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "H", "label": "H", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Li", "label": "Li", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Sn", "label": "Sn", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Ti", "label": "Ti", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Be", "label": "Be", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Ca", "label": "Ca", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Mg", "label": "Mg", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "C", "label": "C", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Fe", "label": "Fe", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "S", "label": "S", "shape": "ellipse"}]);
+                  edges = new vis.DataSet([{"color": "#1f77b4", "from": "Microcline", "to": "K"}, {"color": "#1f77b4", "from": "Microcline", "to": "Al"}, {"color": "#1f77b4", "from": "Microcline", "to": "Si"}, {"color": "#1f77b4", "from": "Microcline", "to": "O"}, {"color": "#ff7f0e", "from": "Monazite-(Ce)", "to": "Ce"}, {"color": "#ff7f0e", "from": "Monazite-(Ce)", "to": "P"}, {"color": "#ff7f0e", "from": "Monazite-(Ce)", "to": "O"}, {"color": "#c97365", "from": "Muscovite", "to": "K"}, {"color": "#c97365", "from": "Muscovite", "to": "Al"}, {"color": "#c97365", "from": "Muscovite", "to": "Si"}, {"color": "#c97365", "from": "Muscovite", "to": "O"}, {"color": "#c97365", "from": "Muscovite", "to": "H"}, {"color": "#ff7f0e", "from": "Spodumene (Hiddenite)", "to": "Li"}, {"color": "#ff7f0e", "from": "Spodumene (Hiddenite)", "to": "Al"}, {"color": "#ff7f0e", "from": "Spodumene (Hiddenite)", "to": "Si"}, {"color": "#ff7f0e", "from": "Spodumene (Hiddenite)", "to": "O"}, {"color": "#bcbd22 ", "from": "Cassiterite", "to": "Sn"}, {"color": "#bcbd22 ", "from": "Cassiterite", "to": "O"}, {"color": "#bcbd22 ", "from": "Rutile", "to": "Ti"}, {"color": "#bcbd22 ", "from": "Rutile", "to": "O"}, {"color": "#17becf", "from": "Beryl", "to": "Be"}, {"color": "#17becf", "from": "Beryl", "to": "Al"}, {"color": "#17becf", "from": "Beryl", "to": "Si"}, {"color": "#17becf", "from": "Beryl", "to": "O"}, {"color": "#1f77b4", "from": "Chabazite-Ca", "to": "Ca"}, {"color": "#1f77b4", "from": "Chabazite-Ca", "to": "Al"}, {"color": "#1f77b4", "from": "Chabazite-Ca", "to": "Si"}, {"color": "#1f77b4", "from": "Chabazite-Ca", "to": "O"}, {"color": "#1f77b4", "from": "Chabazite-Ca", "to": "H"}, {"color": "#9467bd", "from": "Dolomite", "to": "Ca"}, {"color": "#9467bd", "from": "Dolomite", "to": "Mg"}, {"color": "#9467bd", "from": "Dolomite", "to": "C"}, {"color": "#9467bd", "from": "Dolomite", "to": "O"}, {"color": "#9467bd", "from": "Hematite", "to": "Fe"}, {"color": "#9467bd", "from": "Hematite", "to": "O"}, {"color": "#9467bd", "from": "Quartz", "to": "Si"}, {"color": "#9467bd", "from": "Quartz", "to": "O"}, {"color": "#9467bd", "from": "Siderite", "to": "Fe"}, {"color": "#9467bd", "from": "Siderite", "to": "C"}, {"color": "#9467bd", "from": "Siderite", "to": "O"}, {"color": "#bcbd22 ", "from": "Pyrite", "to": "Fe"}, {"color": "#bcbd22 ", "from": "Pyrite", "to": "S"}]);
 
                   nodeColors = {};
                   allNodes = nodes.get({ returnType: "Object" });
