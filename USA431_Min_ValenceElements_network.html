@@ -1,6 +1,7 @@
 
-    <div style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); color: white; font-size: 14px; font-weight: bold; z-index: 9999;">
-        USA431 Minerals & Valence Elements Network
+    <div style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); color: white; font-size: 14px; font-weight: bold; z-index: 9999; text-align: center;">
+        Hiddenite Mine/Colburn Mine (USA431)<br>
+        Minerals & Valence Elements Network
     </div>
     
     <div style="position: absolute; top: 10px; right: 10px; background-color: white; padding: 5px; border-radius: 5px; z-index: 9999; width: 100px;">
@@ -113,7 +114,7 @@
         var network = null;
         function togglePhysics() {
             if (network === null) {
-                network = this.vis.Network(document.getElementById('mynetwork'), data, options);
+                network = new vis.Network(document.getElementById('mynetwork'), data, options);
             }
             var physicsEnabled = network.physics.options.enabled;
             network.setOptions({
@@ -124,16 +125,12 @@
                     },
                     solver: 'forceAtlas2Based',
                     forceAtlas2Based: {
-                        gravitationalConstant: -70,
-                        centralGravity: 0.01,
-                        springLength: 60,
-                        springConstant: 0.08
-                    },
-                    barnesHut: {
-                        gravitationalConstant: -70,
-                        centralGravity: 0.01,
-                        springLength: 60,
-                        springConstant: 0.08
+                        gravitationalConstant:-50,
+                        centralGravity: 0.005,  
+                        springLength: 100,
+                        springConstant: 0.08,
+                        damping: 0.4, 
+                        avoidOverlap: 0.5 
                     }
                 }
             });
@@ -233,7 +230,7 @@
                   
 
                   // parsing and collecting nodes and edges from the python
-                  nodes = new vis.DataSet([{"color": "#97c2fc", "font": {"color": "white"}, "id": "Muscovite", "image": "./MT3.png", "label": "Muscovite", "shape": "image", "size": 43.670212765957444, "title": " 4000 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Spodumene (Hiddenite)", "image": "./M.png", "label": "Spodumene (Hiddenite)", "shape": "image", "size": 35.32393617021277, "title": " 3077 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Cassiterite", "image": "./C.png", "label": "Cassiterite", "shape": "image", "size": 43.670212765957444, "title": " 4000 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Rutile", "image": "./C.png", "label": "Rutile", "shape": "image", "size": 49.27659574468085, "title": " 4620 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Beryl", "image": "./H.png", "label": "Beryl", "shape": "image", "size": 35.02553191489361, "title": " 3044 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Quartz", "image": "./T3.png", "label": "Quartz", "shape": "image", "size": 46.65425531914893, "title": " 4330 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Pyrite", "image": "./C.png", "label": "Pyrite", "shape": "image", "size": 43.670212765957444, "title": " 4000 Ma"}, {"color": "gray", "font": {"color": "white"}, "id": "K", "label": "K", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Al", "label": "Al", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Si", "label": "Si", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "O", "label": "O", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "H", "label": "H", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Li", "label": "Li", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Sn^4+", "label": "Sn^4+", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Ti^4+", "label": "Ti^4+", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Be", "label": "Be", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Fe^2+", "label": "Fe^2+", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "S", "label": "S", "shape": "ellipse"}]);
+                  nodes = new vis.DataSet([{"color": "#97c2fc", "font": {"color": "white"}, "id": "Muscovite", "image": "./MT3.png", "label": "Muscovite", "shape": "image", "size": 43.670212765957444, "title": " 4000 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Spodumene (Hiddenite)", "image": "./M.png", "label": "Spodumene (Hiddenite)", "shape": "image", "size": 35.32393617021277, "title": " 3077 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Cassiterite", "image": "./C.png", "label": "Cassiterite", "shape": "image", "size": 43.670212765957444, "title": " 4000 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Rutile", "image": "./C.png", "label": "Rutile", "shape": "image", "size": 49.27659574468085, "title": " 4620 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Beryl", "image": "./H.png", "label": "Beryl", "shape": "image", "size": 35.02553191489361, "title": " 3044 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Quartz", "image": "./T3.png", "label": "Quartz", "shape": "image", "size": 46.65425531914893, "title": " 4330 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Pyrite", "image": "./C.png", "label": "Pyrite", "shape": "image", "size": 43.670212765957444, "title": " 4000 Ma"}, {"color": "gray", "font": {"color": "white"}, "id": "K", "label": "K", "shape": "ellipse", "title": "Connected to 1 mineral"}, {"color": "gray", "font": {"color": "white"}, "id": "Al", "label": "Al", "shape": "ellipse", "title": "Connected to 3 minerals"}, {"color": "gray", "font": {"color": "white"}, "id": "Si", "label": "Si", "shape": "ellipse", "title": "Connected to 4 minerals"}, {"color": "gray", "font": {"color": "white"}, "id": "O", "label": "O", "shape": "ellipse", "title": "Connected to 6 minerals"}, {"color": "gray", "font": {"color": "white"}, "id": "H", "label": "H", "shape": "ellipse", "title": "Connected to 1 mineral"}, {"color": "gray", "font": {"color": "white"}, "id": "Li", "label": "Li", "shape": "ellipse", "title": "Connected to 1 mineral"}, {"color": "gray", "font": {"color": "white"}, "id": "Sn^4+", "label": "Sn^4+", "shape": "ellipse", "title": "Connected to 1 mineral"}, {"color": "gray", "font": {"color": "white"}, "id": "Ti^4+", "label": "Ti^4+", "shape": "ellipse", "title": "Connected to 1 mineral"}, {"color": "gray", "font": {"color": "white"}, "id": "Be", "label": "Be", "shape": "ellipse", "title": "Connected to 1 mineral"}, {"color": "gray", "font": {"color": "white"}, "id": "Fe^2+", "label": "Fe^2+", "shape": "ellipse", "title": "Connected to 1 mineral"}, {"color": "gray", "font": {"color": "white"}, "id": "S", "label": "S", "shape": "ellipse", "title": "Connected to 1 mineral"}]);
                   edges = new vis.DataSet([{"color": "#c97365", "from": "Muscovite", "to": "K"}, {"color": "#c97365", "from": "Muscovite", "to": "Al"}, {"color": "#c97365", "from": "Muscovite", "to": "Si"}, {"color": "#c97365", "from": "Muscovite", "to": "O"}, {"color": "#c97365", "from": "Muscovite", "to": "H"}, {"color": "#ff7f0e", "from": "Spodumene (Hiddenite)", "to": "Li"}, {"color": "#ff7f0e", "from": "Spodumene (Hiddenite)", "to": "Al"}, {"color": "#ff7f0e", "from": "Spodumene (Hiddenite)", "to": "Si"}, {"color": "#ff7f0e", "from": "Spodumene (Hiddenite)", "to": "O"}, {"color": "#bcbd22 ", "from": "Cassiterite", "to": "Sn^4+"}, {"color": "#bcbd22 ", "from": "Cassiterite", "to": "O"}, {"color": "#bcbd22 ", "from": "Rutile", "to": "Ti^4+"}, {"color": "#bcbd22 ", "from": "Rutile", "to": "O"}, {"color": "#17becf", "from": "Beryl", "to": "Be"}, {"color": "#17becf", "from": "Beryl", "to": "Al"}, {"color": "#17becf", "from": "Beryl", "to": "Si"}, {"color": "#17becf", "from": "Beryl", "to": "O"}, {"color": "#9467bd", "from": "Quartz", "to": "Si"}, {"color": "#9467bd", "from": "Quartz", "to": "O"}, {"color": "#bcbd22 ", "from": "Pyrite", "to": "Fe^2+"}, {"color": "#bcbd22 ", "from": "Pyrite", "to": "S"}]);
 
                   nodeColors = {};
