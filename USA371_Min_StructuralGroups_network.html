@@ -1,6 +1,7 @@
 
-    <div style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); color: white; font-size: 14px; font-weight: bold; z-index: 9999;">
-        USA371 Minerals & Structural Groups Network
+    <div style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); color: white; font-size: 14px; font-weight: bold; z-index: 9999; text-align: center;">
+        Hallman-Beam Mine (USA371)<br>
+        Minerals & Structural Groups Network
     </div>
     
     <div style="position: absolute; top: 10px; right: 10px; background-color: white; padding: 5px; border-radius: 5px; z-index: 9999; width: 100px;">
@@ -113,7 +114,7 @@
         var network = null;
         function togglePhysics() {
             if (network === null) {
-                network = this.vis.Network(document.getElementById('mynetwork'), data, options);
+                network = new vis.Network(document.getElementById('mynetwork'), data, options);
             }
             var physicsEnabled = network.physics.options.enabled;
             network.setOptions({
@@ -124,16 +125,12 @@
                     },
                     solver: 'forceAtlas2Based',
                     forceAtlas2Based: {
-                        gravitationalConstant: -70,
-                        centralGravity: 0.01,
-                        springLength: 60,
-                        springConstant: 0.08
-                    },
-                    barnesHut: {
-                        gravitationalConstant: -70,
-                        centralGravity: 0.01,
-                        springLength: 60,
-                        springConstant: 0.08
+                        gravitationalConstant:-50,
+                        centralGravity: 0.005,  
+                        springLength: 100,
+                        springConstant: 0.08,
+                        damping: 0.4, 
+                        avoidOverlap: 0.5 
                     }
                 }
             });
@@ -233,7 +230,7 @@
                   
 
                   // parsing and collecting nodes and edges from the python
-                  nodes = new vis.DataSet([{"color": "#97c2fc", "font": {"color": "white"}, "id": "Albite", "image": "./T1.png", "label": "Albite", "shape": "image", "size": 49.27659574468085, "title": " 4620 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Beryl", "image": "./H.png", "label": "Beryl", "shape": "image", "size": 35.02553191489361, "title": " 3044 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Chrysoberyl", "image": "./O.png", "label": "Chrysoberyl", "shape": "image", "size": 31.779255319148938, "title": " 2685 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Columbite-(Fe)", "image": "./O.png", "label": "Columbite-(Fe)", "shape": "image", "size": 35.02553191489361, "title": " 3044 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Lithiophilite", "image": "./O.png", "label": "Lithiophilite", "shape": "image", "size": 33.88617021276596, "title": " 2918 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Magnesio-hornblende", "image": "./M.png", "label": "Magnesio-hornblende", "shape": "image", "size": 31.36329787234043, "title": " 2639 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Microcline", "image": "./T1.png", "label": "Microcline", "shape": "image", "size": 37.27712765957447, "title": " 3293 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Muscovite", "image": "./MT3.png", "label": "Muscovite", "shape": "image", "size": 43.670212765957444, "title": " 4000 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Quartz", "image": "./T3.png", "label": "Quartz", "shape": "image", "size": 46.65425531914893, "title": " 4330 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Spodumene", "image": "./M.png", "label": "Spodumene", "shape": "image", "size": 35.32393617021277, "title": " 3077 Ma"}, {"color": "gray", "font": {"color": "white"}, "id": "Feldspar ", "label": "Feldspar ", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Beryl ", "label": "Beryl ", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Olivine ", "label": "Olivine ", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Columbite ", "label": "Columbite ", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Amphibole ", "label": "Amphibole ", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Mica ", "label": "Mica ", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Clay ", "label": "Clay ", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Quartz ", "label": "Quartz ", "shape": "ellipse"}, {"color": "gray", "font": {"color": "white"}, "id": "Pyroxene ", "label": "Pyroxene ", "shape": "ellipse"}]);
+                  nodes = new vis.DataSet([{"color": "#97c2fc", "font": {"color": "white"}, "id": "Albite", "image": "./T1.png", "label": "Albite", "shape": "image", "size": 49.27659574468085, "title": " 4620 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Beryl", "image": "./H.png", "label": "Beryl", "shape": "image", "size": 35.02553191489361, "title": " 3044 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Chrysoberyl", "image": "./O.png", "label": "Chrysoberyl", "shape": "image", "size": 31.779255319148938, "title": " 2685 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Columbite-(Fe)", "image": "./O.png", "label": "Columbite-(Fe)", "shape": "image", "size": 35.02553191489361, "title": " 3044 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Lithiophilite", "image": "./O.png", "label": "Lithiophilite", "shape": "image", "size": 33.88617021276596, "title": " 2918 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Magnesio-hornblende", "image": "./M.png", "label": "Magnesio-hornblende", "shape": "image", "size": 31.36329787234043, "title": " 2639 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Microcline", "image": "./T1.png", "label": "Microcline", "shape": "image", "size": 37.27712765957447, "title": " 3293 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Muscovite", "image": "./MT3.png", "label": "Muscovite", "shape": "image", "size": 43.670212765957444, "title": " 4000 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Quartz", "image": "./T3.png", "label": "Quartz", "shape": "image", "size": 46.65425531914893, "title": " 4330 Ma"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Spodumene", "image": "./M.png", "label": "Spodumene", "shape": "image", "size": 35.32393617021277, "title": " 3077 Ma"}, {"color": "gray", "font": {"color": "white"}, "id": "Feldspar ", "label": "Feldspar ", "shape": "ellipse", "title": "Connected to 2 minerals"}, {"color": "gray", "font": {"color": "white"}, "id": "Beryl ", "label": "Beryl ", "shape": "ellipse", "title": "Connected to 1 mineral"}, {"color": "gray", "font": {"color": "white"}, "id": "Olivine ", "label": "Olivine ", "shape": "ellipse", "title": "Connected to 2 minerals"}, {"color": "gray", "font": {"color": "white"}, "id": "Columbite ", "label": "Columbite ", "shape": "ellipse", "title": "Connected to 1 mineral"}, {"color": "gray", "font": {"color": "white"}, "id": "Amphibole ", "label": "Amphibole ", "shape": "ellipse", "title": "Connected to 1 mineral"}, {"color": "gray", "font": {"color": "white"}, "id": "Mica ", "label": "Mica ", "shape": "ellipse", "title": "Connected to 1 mineral"}, {"color": "gray", "font": {"color": "white"}, "id": "Clay ", "label": "Clay ", "shape": "ellipse", "title": "Connected to 1 mineral"}, {"color": "gray", "font": {"color": "white"}, "id": "Quartz ", "label": "Quartz ", "shape": "ellipse", "title": "Connected to 1 mineral"}, {"color": "gray", "font": {"color": "white"}, "id": "Pyroxene ", "label": "Pyroxene ", "shape": "ellipse", "title": "Connected to 1 mineral"}]);
                   edges = new vis.DataSet([{"color": "#1f77b4", "from": "Albite", "to": "Feldspar "}, {"color": "#17becf", "from": "Beryl", "to": "Beryl "}, {"color": "#2ca02c", "from": "Chrysoberyl", "to": "Olivine "}, {"color": "#2ca02c", "from": "Columbite-(Fe)", "to": "Columbite "}, {"color": "#2ca02c", "from": "Lithiophilite", "to": "Olivine "}, {"color": "#ff7f0e", "from": "Magnesio-hornblende", "to": "Amphibole "}, {"color": "#1f77b4", "from": "Microcline", "to": "Feldspar "}, {"color": "#c97365", "from": "Muscovite", "to": "Mica "}, {"color": "#c97365", "from": "Muscovite", "to": "Clay "}, {"color": "#9467bd", "from": "Quartz", "to": "Quartz "}, {"color": "#ff7f0e", "from": "Spodumene", "to": "Pyroxene "}]);
 
                   nodeColors = {};
