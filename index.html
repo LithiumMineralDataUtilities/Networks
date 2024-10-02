@@ -39,7 +39,7 @@
 
         .main-content {
             display: flex; /* Use flexbox to align items */
-            justify-content: space-between; /* Space between text and map */
+            justify-content: flex-start; /* Align items to the left */
         }
 
         .text-content {
@@ -48,7 +48,7 @@
         }
 
         .map-container {
-            width: 120%; /* Set width to 66% of the container */
+            width: 66%; /* Set width to 66% of the container */
             height: 600px; /* Set height for the map */
             border: none; /* No border for the iframe */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add some shadow for aesthetics */
@@ -123,7 +123,7 @@
 
         <!-- Map Iframe -->
         <div>
-            <h2>Network Map</h2>
+            <h2>Network Map:</h2>
             <iframe class="map-container" src="NetworkMap.htm" title="Network Map"></iframe>
         </div>
     </div>
