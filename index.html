@@ -46,12 +46,11 @@
             flex: 1; /* Let the text take up the remaining space */
         }
 
-        .second-container img {
-            height: auto; /* Maintain the aspect ratio based on width */
-            max-height: 100%; /* Ensure the image height does not exceed the text container */
-            width: auto; /* Maintain aspect ratio */
-            object-fit: cover; /* Cover the area while preserving aspect ratio */
-            max-width: 600px; /* Prevent the image from becoming too large */
+        .map-container {
+            width: 100%;
+            height: 600px; /* Set height for the map */
+            border: none; /* No border for the iframe */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add some shadow for aesthetics */
         }
 
         footer {
@@ -94,7 +93,7 @@
         <div class="link-item"><a href="about.html">About</a></div>
     </div>
 
-    <!-- Second Container with Image and Text -->
+    <!-- Second Container with Text -->
     <div class="container second-container">
         <div class="text-content">
             <h2>Network Diagrams by Locality:</h2>
@@ -107,20 +106,25 @@
                 <li><a href="CoA030.html">Greenbushes Mine</a></li>
                 <li><a href="CoA055.html">Mount Marion Pegmatites</a></li>
                 <li><a href="CoA061.html">Pilgangoora Pegmatites</a></li>
-		<li><a href="Ger001.html">Amerika Quarry</a></li>
-		<li><a href="Ita006.html">Cerchiara Mine</a></li>
+                <li><a href="Ger001.html">Amerika Quarry</a></li>
+                <li><a href="Ita006.html">Cerchiara Mine</a></li>
                 <li><a href="Ser002.html">Jadar lithium Deposit</a></li>
                 <li><a href="USA012.html">Adams Hiddenite and Emerald Mine</a></li>
-		<li><a href="USA051.html">North American Emerald Mine</a></li>
-		<li><a href="USA431.html">Hiddenite Mine (Colburn Mine)</a></li>
+                <li><a href="USA051.html">North American Emerald Mine</a></li>
+                <li><a href="USA431.html">Hiddenite Mine (Colburn Mine)</a></li>
                 <li><a href="USA371.html">Hallman-Beam Mine</a></li>
                 <li><a href="USA381.html">Harding Mine</a></li>
-		<li><a href="USA172.html">Kramer Borate deposit</a></li>
+                <li><a href="USA172.html">Kramer Borate deposit</a></li>
                 <li><a href="USA387.html">McDermitt Mine</a></li>
                 <li><a href="USA508.html">Spor Mountain Mining District</a></li>
             </ul>
         </div>
-        <img src="Leucogranite.jpg" alt="Leucogranite Image">
+    </div>
+
+    <!-- Map Iframe -->
+    <div class="container">
+        <h2>Network Map:</h2>
+        <iframe class="map-container" src="NetworkMap.htm" title="Network Map"></iframe>
     </div>
 
     <footer>
