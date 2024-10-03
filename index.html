@@ -38,23 +38,24 @@
         }
 
         .main-content {
-            display: flex; /* Use flexbox to align items */
-            justify-content: flex-start; /* Align items to the left */
-         
+            display: flex;
+            height: 100%; /* Ensure both containers are the same height */
         }
 
-        .text-content {
-            /*flex: 1; /* Let the text take up the remaining space */
-            margin-right: 100px; /* Space between text and map */
-              flex-shrink: 3;
+        .left-container {
+            flex-basis: 33.33%; /* Take up 1/3 of the page width */
+            padding-right: 15px; /* Space between the two containers */
+        }
+
+        .right-container {
+            flex-basis: 66.67%; /* Take up 2/3 of the page width */
         }
 
         .map-container {
-           
-            width: 1000px; /* Set width to 66% of the container */
-            height: 600px; /* Set height for the map */
+            width: 100%; /* Use the full width of the right container */
+            height: 85%; /* Ensure the map takes up the full container height */
             border: none; /* No border for the iframe */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add some shadow for aesthetics */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow for aesthetics */
         }
 
         footer {
@@ -83,12 +84,12 @@
         .page-list a:hover {
             text-decoration: underline;
         }
-         /* CSS for h3 alignment */
+
         h3 {
             text-align: center; /* Center the heading over the map */
-             margin: 5px 0; /* Optional: add margin for spacing */
+            margin: 5px 0; /* Optional: add margin for spacing */
         }
-         /* CSS for h6 alignment */
+
         h6 {
             text-align: right; 
         }
@@ -106,9 +107,10 @@
         <div class="link-item"><a href="about.html">About</a></div>
     </div>
 
-    <!-- Main Content Area -->
+    <!-- Main Content Area with Left and Right Containers -->
     <div class="container main-content">
-        <div class="text-content">
+        <!-- Left container for text content -->
+        <div class="left-container">
             <h3>Find Network Diagrams by Locality Name</h3>
             <ul class="page-list">
                 <li><a href="Arg030.html">La Viquita pegmatite</a></li>
@@ -137,9 +139,9 @@
             </ul>
         </div>
 
-        <!-- Map Iframe -->
-        <div>
-            <h3> Find Networks Geographically</h3>
+        <!-- Right container for the map -->
+        <div class="right-container">
+            <h3>Find Networks Geographically</h3>
             <h6>Click on Locality for Networks</h6>
             <iframe class="map-container" src="NetworkMap.html" title="Network Map"></iframe>
         </div>
