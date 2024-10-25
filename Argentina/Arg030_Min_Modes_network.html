@@ -197,7 +197,27 @@
             
             <div id="mynetwork" class="card-body"></div>
         </div>
+   <style>
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            position: fixed; /* Position the button relative to the viewport */
+            bottom: 20px;    /* Distance from the bottom */
+            right: 20px;     /* Distance from the right */
+        }
+    </style>
+</head>
+<body>
+    <!-- Button to open the popup -->
+    <button onclick="openPopup()">Open Table in Popup</button>
 
+    <script>
+        function openPopup() {
+            window.open('table.html', 'popup', 'width=600,height=400');
+        }
+    </script>
+</body>
         
         
 
