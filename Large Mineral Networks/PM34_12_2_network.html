@@ -384,11 +384,16 @@
                   
 
                   return network;
-<style>
+
+              }
+              drawGraph();
+        </script>
+    </body>
+         <style>
     /* Style for the buttons */
     .popupButton {
         padding: 10px 20px;
-        font-size: 12px;
+        font-size: 10px;
         cursor: pointer;
         position: fixed;
         left: 20px;
@@ -419,22 +424,18 @@
         background-color: #45a049;
     }
 </style>
-
-
+</head>
     <!-- Buttons to open popups or perform actions -->
-    <button id="popupButton1" class="popupButton" onclick="openPopup('table1.html')">Network Metrics</button>
-    <button id="popupButton2" class="popupButton" onclick="openPopup('table2.html')">Graph Analysis</button>
-    <button id="popupButton3" class="popupButton" onclick="openPopup('table3.html')">Node Data</button>
+    <button id="popupButton1" class="popupButton" onclick="openPopup(‘Metrics/PM34_12_2Network Metrics.html')">Network Metrics</button>
+    <button id="popupButton2" class="popupButton" onclick="openPopup(‘Metrics/PM34_12_2Primary Node Metrics.html')">Primary Node Metrics</button>
+    <button id="popupButton3" class="popupButton" onclick="openPopup(‘Metrics/PM34_12_2Secondary Node Metrics.html')">Secondary Node Metrics</button>
 
     <script>
         function openPopup(page) {
             window.open(page, 'popup', 'width=600,height=400');
         }
     </script>
-
-
-              }
-              drawGraph();
-        </script>
-    </body>
+</body>
+        
+   
 </html>
