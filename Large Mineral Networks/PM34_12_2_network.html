@@ -388,5 +388,18 @@
               }
               drawGraph();
         </script>
+            #popupButton:hover {
+        background-color: #45a049; /* Darker green on hover */
+    }
+</style>
+</head>
+<body>
+    <!-- Button to open the popup -->
+    <button id="popupButton" onclick="openPopup()">Network Metrics</button>
+
+    <script>
+        function openPopup() {
+            window.open('table.html', 'popup', 'width=600,height=400');
+        }
     </body>
 </html>
