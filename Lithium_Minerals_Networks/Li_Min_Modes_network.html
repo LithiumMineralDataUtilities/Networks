@@ -389,4 +389,53 @@
               drawGraph();
         </script>
     </body>
+         <style>
+    /* Style for the buttons */
+    .popupButton {
+        padding: 10px 20px;
+        font-size: 10px;
+        cursor: pointer;
+        position: fixed;
+        left: 20px;
+        width: 150px;
+        height: 40px;
+        border: none;
+        background-color: #4CAF50;
+        color: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Set individual positions for the buttons */
+    #popupButton1 {
+        bottom: 120px; /* Distance from bottom for first button */
+    }
+
+    #popupButton2 {
+        bottom: 70px; /* Distance from bottom for second button */
+    }
+
+    #popupButton3 {
+        bottom: 20px; /* Distance from bottom for third button */
+    }
+
+    /* Hover effect for buttons */
+    .popupButton:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+    <!-- Buttons to open popups or perform actions -->
+    <button id="popupButton1" class="popupButton" onclick="openPopup('LithiumMineralsModeNetwork.html')">Network Metrics</button>
+    <button id="popupButton2" class="popupButton" onclick="openPopup('LithiumMineralsModePrimary Node.html')">Primary Node Metrics</button>
+    <button id="popupButton3" class="popupButton" onclick="openPopup('LithiumMineralsModeSecondary Node.html')">Secondary Node Metrics</button>
+
+    <script>
+        function openPopup(page) {
+            window.open(page, 'popup', 'width=600,height=400');
+        }
+    </script>
+</body>
+        
+   
 </html>
