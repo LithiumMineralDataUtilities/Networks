@@ -1,0 +1,378 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tertiary Node Table</title>
+        <!-- Include DataTables CSS and jQuery -->
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+        <style>
+            /* Basic styling for table */
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                border: 1px solid #333;
+            }
+            
+            th, td {
+                padding: 8px;
+                text-align: left;
+                border: 1px solid #ddd;
+            }
+            
+            th {
+                font-weight: bold;
+            }
+            
+            h2 {
+                font-weight: bold;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Tertiary Node Table</h2>
+        <!-- HTML Table from DataFrame -->
+        <table border="1" class="dataframe" id="myTable_3">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Paragenetic Modes</th>
+      <th>Degree</th>
+      <th>Betweenness Centrality</th>
+      <th>Eigenvector Centrality</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>PM7</td>
+      <td>15</td>
+      <td>0.007</td>
+      <td>0.060</td>
+    </tr>
+    <tr>
+      <td>PM19</td>
+      <td>17</td>
+      <td>0.009</td>
+      <td>0.065</td>
+    </tr>
+    <tr>
+      <td>PM23</td>
+      <td>26</td>
+      <td>0.019</td>
+      <td>0.103</td>
+    </tr>
+    <tr>
+      <td>PM26</td>
+      <td>19</td>
+      <td>0.009</td>
+      <td>0.074</td>
+    </tr>
+    <tr>
+      <td>PM35</td>
+      <td>25</td>
+      <td>0.014</td>
+      <td>0.106</td>
+    </tr>
+    <tr>
+      <td>PM36</td>
+      <td>26</td>
+      <td>0.022</td>
+      <td>0.095</td>
+    </tr>
+    <tr>
+      <td>PM39</td>
+      <td>7</td>
+      <td>0.001</td>
+      <td>0.028</td>
+    </tr>
+    <tr>
+      <td>PM40</td>
+      <td>32</td>
+      <td>0.030</td>
+      <td>0.129</td>
+    </tr>
+    <tr>
+      <td>PM51</td>
+      <td>6</td>
+      <td>0.001</td>
+      <td>0.023</td>
+    </tr>
+    <tr>
+      <td>PM4</td>
+      <td>7</td>
+      <td>0.002</td>
+      <td>0.022</td>
+    </tr>
+    <tr>
+      <td>PM5</td>
+      <td>9</td>
+      <td>0.003</td>
+      <td>0.028</td>
+    </tr>
+    <tr>
+      <td>PM9</td>
+      <td>5</td>
+      <td>0.000</td>
+      <td>0.022</td>
+    </tr>
+    <tr>
+      <td>PM10</td>
+      <td>6</td>
+      <td>0.001</td>
+      <td>0.025</td>
+    </tr>
+    <tr>
+      <td>PM16</td>
+      <td>10</td>
+      <td>0.001</td>
+      <td>0.046</td>
+    </tr>
+    <tr>
+      <td>PM17</td>
+      <td>12</td>
+      <td>0.004</td>
+      <td>0.047</td>
+    </tr>
+    <tr>
+      <td>PM22</td>
+      <td>23</td>
+      <td>0.008</td>
+      <td>0.089</td>
+    </tr>
+    <tr>
+      <td>PM24</td>
+      <td>16</td>
+      <td>0.007</td>
+      <td>0.059</td>
+    </tr>
+    <tr>
+      <td>PM34</td>
+      <td>19</td>
+      <td>0.016</td>
+      <td>0.065</td>
+    </tr>
+    <tr>
+      <td>PM43</td>
+      <td>4</td>
+      <td>0.000</td>
+      <td>0.019</td>
+    </tr>
+    <tr>
+      <td>PM45</td>
+      <td>9</td>
+      <td>0.003</td>
+      <td>0.030</td>
+    </tr>
+    <tr>
+      <td>PM8</td>
+      <td>8</td>
+      <td>0.002</td>
+      <td>0.025</td>
+    </tr>
+    <tr>
+      <td>PM38</td>
+      <td>15</td>
+      <td>0.008</td>
+      <td>0.049</td>
+    </tr>
+    <tr>
+      <td>PM32</td>
+      <td>45</td>
+      <td>0.046</td>
+      <td>0.159</td>
+    </tr>
+    <tr>
+      <td>PM14</td>
+      <td>8</td>
+      <td>0.002</td>
+      <td>0.026</td>
+    </tr>
+    <tr>
+      <td>PM48</td>
+      <td>5</td>
+      <td>0.000</td>
+      <td>0.017</td>
+    </tr>
+    <tr>
+      <td>PM49</td>
+      <td>13</td>
+      <td>0.008</td>
+      <td>0.043</td>
+    </tr>
+    <tr>
+      <td>PM6</td>
+      <td>23</td>
+      <td>0.020</td>
+      <td>0.082</td>
+    </tr>
+    <tr>
+      <td>PM31</td>
+      <td>18</td>
+      <td>0.008</td>
+      <td>0.072</td>
+    </tr>
+    <tr>
+      <td>PM25</td>
+      <td>8</td>
+      <td>0.002</td>
+      <td>0.028</td>
+    </tr>
+    <tr>
+      <td>PM50</td>
+      <td>16</td>
+      <td>0.010</td>
+      <td>0.048</td>
+    </tr>
+    <tr>
+      <td>PM54</td>
+      <td>13</td>
+      <td>0.006</td>
+      <td>0.038</td>
+    </tr>
+    <tr>
+      <td>PM21</td>
+      <td>7</td>
+      <td>0.001</td>
+      <td>0.025</td>
+    </tr>
+    <tr>
+      <td>PM20</td>
+      <td>5</td>
+      <td>0.001</td>
+      <td>0.022</td>
+    </tr>
+    <tr>
+      <td>PM33</td>
+      <td>9</td>
+      <td>0.003</td>
+      <td>0.018</td>
+    </tr>
+    <tr>
+      <td>PM46</td>
+      <td>1</td>
+      <td>0.0</td>
+      <td>0.004</td>
+    </tr>
+    <tr>
+      <td>PM47</td>
+      <td>34</td>
+      <td>0.042</td>
+      <td>0.107</td>
+    </tr>
+    <tr>
+      <td>PM53</td>
+      <td>9</td>
+      <td>0.003</td>
+      <td>0.025</td>
+    </tr>
+    <tr>
+      <td>PM55</td>
+      <td>2</td>
+      <td>0.000</td>
+      <td>0.007</td>
+    </tr>
+    <tr>
+      <td>PM12</td>
+      <td>9</td>
+      <td>0.003</td>
+      <td>0.017</td>
+    </tr>
+    <tr>
+      <td>PM15</td>
+      <td>10</td>
+      <td>0.004</td>
+      <td>0.024</td>
+    </tr>
+    <tr>
+      <td>PM37</td>
+      <td>8</td>
+      <td>0.002</td>
+      <td>0.020</td>
+    </tr>
+    <tr>
+      <td>PM56</td>
+      <td>2</td>
+      <td>0.000</td>
+      <td>0.007</td>
+    </tr>
+    <tr>
+      <td>PM28</td>
+      <td>2</td>
+      <td>0.000</td>
+      <td>0.006</td>
+    </tr>
+    <tr>
+      <td>PM44</td>
+      <td>5</td>
+      <td>0.000</td>
+      <td>0.019</td>
+    </tr>
+    <tr>
+      <td>PM11</td>
+      <td>3</td>
+      <td>0.000</td>
+      <td>0.006</td>
+    </tr>
+    <tr>
+      <td>PM13</td>
+      <td>10</td>
+      <td>0.003</td>
+      <td>0.037</td>
+    </tr>
+    <tr>
+      <td>PM1</td>
+      <td>3</td>
+      <td>0.000</td>
+      <td>0.009</td>
+    </tr>
+    <tr>
+      <td>PM29</td>
+      <td>1</td>
+      <td>0.0</td>
+      <td>0.002</td>
+    </tr>
+    <tr>
+      <td>PM30</td>
+      <td>1</td>
+      <td>0.0</td>
+      <td>0.004</td>
+    </tr>
+    <tr>
+      <td>PM41</td>
+      <td>2</td>
+      <td>0.000</td>
+      <td>0.007</td>
+    </tr>
+    <tr>
+      <td>PM3</td>
+      <td>2</td>
+      <td>0.000</td>
+      <td>0.007</td>
+    </tr>
+    <tr>
+      <td>PM42</td>
+      <td>1</td>
+      <td>0.0</td>
+      <td>0.004</td>
+    </tr>
+    <tr>
+      <td>PM52</td>
+      <td>1</td>
+      <td>0.0</td>
+      <td>0.003</td>
+    </tr>
+  </tbody>
+</table>
+
+        <!-- Initialize DataTables -->
+        <script>
+            $(document).ready(function() {
+                $('#myTable_3').DataTable();
+            });
+        </script>
+    </body>
+    </html>
+    
