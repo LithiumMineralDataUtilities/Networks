@@ -1,0 +1,68 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Network Metrics Table</title>
+        <!-- Include DataTables CSS and jQuery -->
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+        <style>
+            /* Basic styling for table */
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                border: 1px solid #333;
+            }
+            
+            th, td {
+                padding: 8px;
+                text-align: left;
+                border: 1px solid #ddd;
+            }
+            
+            th {
+                font-weight: bold;
+            }
+            
+            h2 {
+                font-weight: bold;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Network Metrics Table</h2>
+        <!-- HTML Table from DataFrame -->
+        <table border="1" class="dataframe" id="myTable_0">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Total Nodes</th>
+      <th>Total Edges</th>
+      <th>Average Degree</th>
+      <th>Edge Density</th>
+      <th>Edge Density2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1255</td>
+      <td>9865</td>
+      <td>15.721</td>
+      <td>0.013</td>
+      <td>0.012</td>
+    </tr>
+  </tbody>
+</table>
+
+        <!-- Initialize DataTables -->
+        <script>
+            $(document).ready(function() {
+                $('#myTable_0').DataTable();
+            });
+        </script>
+    </body>
+    </html>
+    
