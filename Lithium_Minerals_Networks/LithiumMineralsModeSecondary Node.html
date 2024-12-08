@@ -1,0 +1,168 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Secondary Node Table</title>
+        <!-- Include DataTables CSS and jQuery -->
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+        <style>
+            /* Basic styling for table */
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                border: 1px solid #333;
+            }
+            
+            th, td {
+                padding: 8px;
+                text-align: left;
+                border: 1px solid #ddd;
+            }
+            
+            th {
+                font-weight: bold;
+            }
+            
+            h2 {
+                font-weight: bold;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Secondary Node Table</h2>
+        <!-- HTML Table from DataFrame -->
+        <table border="1" class="dataframe" id="myTable_2">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Paragenetic Modes</th>
+      <th>Degree</th>
+      <th>Betweenness Centrality</th>
+      <th>Eigenvector Centrality</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>PM48</td>
+      <td>2</td>
+      <td>0.014</td>
+      <td>0.013</td>
+    </tr>
+    <tr>
+      <td>PM23</td>
+      <td>9</td>
+      <td>0.046</td>
+      <td>0.075</td>
+    </tr>
+    <tr>
+      <td>PM32</td>
+      <td>14</td>
+      <td>0.123</td>
+      <td>0.021</td>
+    </tr>
+    <tr>
+      <td>PM35</td>
+      <td>28</td>
+      <td>0.321</td>
+      <td>0.039</td>
+    </tr>
+    <tr>
+      <td>PM34</td>
+      <td>58</td>
+      <td>0.603</td>
+      <td>0.669</td>
+    </tr>
+    <tr>
+      <td>PM47</td>
+      <td>10</td>
+      <td>0.032</td>
+      <td>0.105</td>
+    </tr>
+    <tr>
+      <td>PM22</td>
+      <td>22</td>
+      <td>0.173</td>
+      <td>0.157</td>
+    </tr>
+    <tr>
+      <td>PM19</td>
+      <td>10</td>
+      <td>0.083</td>
+      <td>0.063</td>
+    </tr>
+    <tr>
+      <td>PM26</td>
+      <td>4</td>
+      <td>0.020</td>
+      <td>0.044</td>
+    </tr>
+    <tr>
+      <td>PM40</td>
+      <td>5</td>
+      <td>0.007</td>
+      <td>0.051</td>
+    </tr>
+    <tr>
+      <td>PM14</td>
+      <td>1</td>
+      <td>0.0</td>
+      <td>0.000</td>
+    </tr>
+    <tr>
+      <td>PM16</td>
+      <td>1</td>
+      <td>0.0</td>
+      <td>0.000</td>
+    </tr>
+    <tr>
+      <td>PM25</td>
+      <td>2</td>
+      <td>0.000</td>
+      <td>0.000</td>
+    </tr>
+    <tr>
+      <td>PM21</td>
+      <td>2</td>
+      <td>0.014</td>
+      <td>0.013</td>
+    </tr>
+    <tr>
+      <td>PM39</td>
+      <td>1</td>
+      <td>0.0</td>
+      <td>0.000</td>
+    </tr>
+    <tr>
+      <td>PM9</td>
+      <td>4</td>
+      <td>0.019</td>
+      <td>0.002</td>
+    </tr>
+    <tr>
+      <td>PM10</td>
+      <td>1</td>
+      <td>0.0</td>
+      <td>0.001</td>
+    </tr>
+    <tr>
+      <td>PM36</td>
+      <td>1</td>
+      <td>0.0</td>
+      <td>0.001</td>
+    </tr>
+  </tbody>
+</table>
+
+        <!-- Initialize DataTables -->
+        <script>
+            $(document).ready(function() {
+                $('#myTable_2').DataTable();
+            });
+        </script>
+    </body>
+    </html>
+    
