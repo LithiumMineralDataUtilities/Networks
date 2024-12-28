@@ -83,23 +83,55 @@
         <h1>About</h1>
 
         <div class="section">
-            <h2 class="section-title">Networks</h2>
+            <h2 class="section-title"></h2>
             <p>
+                <h2>Overview</h2>
                 Welcome to the Lithium Mineral Locality Database Network Analysis, where subsets of our database are displayed as networks. Rather than discerning data patterns in table format, these networks connect 
                 minerals to their features creating an interconnected web whereby the density and sparseness of intersections provide interesting analysis. Each network represents a locality containing one or more 
                 lithium-bearing minerals except for the first network titled "Lithium Minerals." 
             </p>
             <p>
+                <h2>Network Structure</h2>
                 Networks consist of nodes and edges. Primary nodes are always named minerals, while secondary and tertiary nodes may be chemical elements, valence elements,
                 mineral formulas, structural groups, or paragenetic modes. The different node types are distinguishable from one another by their shapes. Edges are the individual
                 strands connecting related nodes. A mineral's oldest known age is represented by its relative size and can be found by hovering over its node. A unique node color displays the crystal system associated
                 with a given mineral.
             </p>
             <p>
-                NETWORK CONSTRUCTION
+                <h2>Network Construction</h2>
+                Networks were created using Python, leveraging the Pyvis library to generate nodes and edges while simulating forces like repulsion and attraction 
+                to dynamically control the network layout. 
             </p>
+           
             <p>
-                DATA REFERENCES
+                <h2>History of Mineral Networks</h2>
+                Morrison et al. (2017) pioneered mineral network analysis, visualizing relationships using unipartite and bipartite networks and applying metrics like edge density and transitivity to understand mineral 
+            systems and assemblages. Liu et al. (2018) applied bipartite networks to study vanadium minerals, offering insights into their elemental associations and paragenetic modes. Ostroverkhova and Prabhu (2019) 
+            visualized lithium mineral assemblages through unipartite networks, categorized by age, revealing their evolutionary trends. Morrison et al. (2020) extended unipartite analysis to carbon and lithium minerals, 
+            visualizing their evolutionary history and temporal relationships. Spielman and Moore (2020) developed a bipartite network of lithium minerals and their elemental constituents, revealing evolutionary trends 
+            tied to redox state and element complexity. Moore et al. (2022) built a comprehensive bipartite network of all known minerals and their elemental constituents, analyzing its evolution across four temporal slices. 
+            Papers on the evolutionary systems of mineralogy, parts I, III, VI, VII, and VIII, all developed bipartite networks central to mineral evolution (Hazen and Morrison, 2020; Hazen, Morrison and Prabhu, 2021; 
+            Hazen et al., 2023; Morrison, Prabhu and Hazen, 2023, 2024). The networks within these series consist of chronologically grouped minerals and their paragenetic modes. Another significant contribution to 
+            network analysis involved applying the Large Number of Rare Events distribution model (LNRE) to mineral ecology (Hystad et al., 2019). 
+            Such distributions are found throughout many mineral networks.
+
+            <h2>REFERENCES</h2>
+            <ul>
+                <li>Hazen, R.M. et al. (2023) ‘An evolutionary system of mineralogy, Part VII: The evolution of the igneous minerals (&gt;2500 Ma)’, American Mineralogist, 108(9), pp. 1620–1641. Available at: https://doi.org/10.2138/am-2022-8539.</li>
+                <li>Hazen, R.M. and Morrison, S.M. (2020) ‘An evolutionary system of mineralogy. Part I: Stellar mineralogy (&gt;13 to 4.6 Ga)’, American Mineralogist, 105(5), pp. 627–651. Available at: https://doi.org/10.2138/am-2020-7173.</li>
+                <li>Hazen, R.M., Morrison, S.M. and Prabhu, A. (2021) ‘An evolutionary system of mineralogy. Part III: Primary chondrule mineralogy (4566 to 4561 Ma)’, American Mineralogist, 106(3), pp. 325–350. Available at: https://doi.org/10.2138/am-2020-7564.</li>
+                <li>Liu, C. et al. (2018) ‘Analysis and visualization of vanadium mineral diversity and distribution’, American Mineralogist, 103(7), pp. 1080–1086. Available at: https://doi.org/10.2138/am-2018-6274.</li>
+                <li>Moore, E.K. et al. (2022) ‘The expanding network of mineral chemistry throughout earth history reveals global shifts in crustal chemistry during the Proterozoic’, Scientific Reports, 12(1), p. 4956. Available at: https://doi.org/10.1038/s41598-022-08650-x.</li>
+                <li>Morrison, S.M. et al. (2017) ‘Network analysis of mineralogical systems’, American Mineralogist, 102(8), pp. 1588–1596. Available at: https://doi.org/10.2138/am-2017-6104CCBYNCND.</li>
+                <li>Morrison, S.M. et al. (2020) ‘Exploring Carbon Mineral Systems: Recent Advances in C Mineral Evolution, Mineral Ecology, and Network Analysis’, Frontiers in Earth Science, 8, p. 208. Available at: https://doi.org/10.3389/feart.2020.00208.</li>
+                <li>Morrison, S.M., Prabhu, A. and Hazen, R.M. (2023) ‘An evolutionary system of mineralogy, Part VI: Earth’s earliest Hadean crust (&gt;4370 Ma)’, American Mineralogist, 108(1), pp. 42–58. Available at: https://doi.org/10.2138/am-2022-8329.</li>
+                <li>MorrOstroverkhova, A. and Prabhu, A. (2019) ‘Evolution and structure complexity of lithium minerals: applying of network analysis’. International Meeting on Crystal Chemistry, X-ray Diffraction and Spectroscopy of Minerals; Apatity.ison, S.M., Prabhu, A. and Hazen, R.M. (2024) ‘An evolutionary system of mineralogy, Part VIII: The evolution of metamorphic minerals’, American Mineralogist, 109(10), pp. 1760–1784. Available at: https://doi.org/10.2138/am-2023-9004.</li>
+                <li>Ostroverkhova, A. and Prabhu, A. (2019) ‘Evolution and structure complexity of lithium minerals: applying of network analysis’. International Meeting on Crystal Chemistry, X-ray Diffraction and Spectroscopy of Minerals; Apatity.</li>
+                <li>Spielman, S.J. and Moore, E.K. (2020) ‘dragon: A New Tool for Exploring Redox Evolution Preserved in the Mineral Record’, Frontiers in Earth Science, 8, p. 585087. Available at: https://doi.org/10.3389/feart.2020.585087.</li>
+               
+            </ul>
+
+            
             </p>
         </div>
 
