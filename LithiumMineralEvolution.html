@@ -39,6 +39,7 @@
         }
         .diagram-list li {
             margin: 10px 0;
+            display: flex;
         }
         .diagram-list a {
             text-decoration: none;
@@ -48,61 +49,91 @@
         .diagram-list a:hover {
             text-decoration: underline;
         }
+        
+        /* CSS to align the second column */
+        .link-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .link-container .first-column a {
+            margin-right: 20px; /* Space between first and second link */
+        }
+
+        .second-column {
+            margin-left: 60px; /* 60px distance from first column */
+        }
+
+        .spacer {
+            margin-right: 40px; /* Adjust spacing between columns */
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Lithium Mineral Evolution Networks</h1>
     </header>
-    <head>
-  <style>
-    .inline-links li {
-      display: inline;
-      margin-right: 20px;
-    }
-    .spacer {
-      display: inline;
-      margin-right: 40px; /* Adjust to get 4 spaces */
-    }
-  </style>
-</head>
-<body>
-<div class="content">
-    <h2>Choose a Diagram to View:</h2>
-    <ul class="diagram-list" style="list-style-type: none; padding: 0;">
-        <li style="display: flex; margin-bottom: 20px;">
-            <a href="Lithium_Mineral_Evolution/LiMins_3077-2500.html" target="_blank">3077-2500 Ma</a>
-            <a href="Lithium_Mineral_Evolution/3077-2500 Stats.html" target="_blank" style="margin-left: 30px;">Mineral Statistics</a>
-        </li>
 
-        <li style="display: flex; margin-bottom: 20px;">
-            <a href="Lithium_Mineral_Evolution/LiMins_3077-2000.html" target="_blank">3077-2000 Ma</a>
-            <a href="Lithium_Mineral_Evolution/3077-2000 Stats.html" target="_blank" style="margin-left: 30px;">Mineral Statistics</a>
-        </li>
+    <div class="content">
+        <h2>Choose a Diagram to View:</h2>
+        <ul class="diagram-list">
+            <li class="link-container">
+                <div class="first-column">
+                    <a href="Lithium_Mineral_Evolution/LiMins_3077-2500.html" target="_blank">3077-2500 Ma</a>
+                </div>
+                <div class="second-column">
+                    <a href="Lithium_Mineral_Evolution/3077-2500 Stats.html" target="_blank">Mineral Statistics</a>
+                </div>
+            </li>
 
-        <li style="display: flex; margin-bottom: 20px;">
-            <a href="Lithium_Mineral_Evolution/LiMins_3077-1500.html" target="_blank">3077-1500 Ma</a>
-            <a href="Lithium_Mineral_Evolution/3077-1500 Stats.html" target="_blank" style="margin-left: 30px;">Mineral Statistics</a>
-        </li>
+            <li class="link-container">
+                <div class="first-column">
+                    <a href="Lithium_Mineral_Evolution/LiMins_3077-2000.html" target="_blank">3077-2000 Ma</a>
+                </div>
+                <div class="second-column">
+                    <a href="Lithium_Mineral_Evolution/3077-2000 Stats.html" target="_blank">Mineral Statistics</a>
+                </div>
+            </li>
 
-        <li style="display: flex; margin-bottom: 20px;">
-            <a href="Lithium_Mineral_Evolution/LiMins_3077-1000.html" target="_blank">3077-1000 Ma</a>
-            <a href="Lithium_Mineral_Evolution/3077-1000 Stats.html" target="_blank" style="margin-left: 30px;">Mineral Statistics</a>
-        </li>
+            <li class="link-container">
+                <div class="first-column">
+                    <a href="Lithium_Mineral_Evolution/LiMins_3077-1500.html" target="_blank">3077-1500 Ma</a>
+                </div>
+                <div class="second-column">
+                    <a href="Lithium_Mineral_Evolution/3077-1500 Stats.html" target="_blank">Mineral Statistics</a>
+                </div>
+            </li>
 
-        <li style="display: flex; margin-bottom: 20px;">
-            <a href="Lithium_Mineral_Evolution/LiMins_3077-500.html" target="_blank">3077-500 Ma</a>
-            <a href="Lithium_Mineral_Evolution/3077-500 Stats.html" target="_blank" style="margin-left: 30px;">Mineral Statistics</a>
-        </li>
+            <li class="link-container">
+                <div class="first-column">
+                    <a href="Lithium_Mineral_Evolution/LiMins_3077-1000.html" target="_blank">3077-1000 Ma</a>
+                </div>
+                <div class="second-column">
+                    <a href="Lithium_Mineral_Evolution/3077-1000 Stats.html" target="_blank">Mineral Statistics</a>
+                </div>
+            </li>
 
-        <li style="display: flex; margin-bottom: 20px;">
-            <a href="Lithium_Mineral_Evolution/LiMins_3077-0.html" target="_blank">3077-0 Ma</a>
-            <a href="Lithium_Mineral_Evolution/3077-0 Stats.html" target="_blank" style="margin-left: 30px;">Mineral Statistics</a>
-        </li>
-    </ul>
-    <p><a href="index.html">Back to Home</a></p>
-</div>
-</body>
+            <li class="link-container">
+                <div class="first-column">
+                    <a href="Lithium_Mineral_Evolution/LiMins_3077-500.html" target="_blank">3077-500 Ma</a>
+                </div>
+                <div class="second-column">
+                    <a href="Lithium_Mineral_Evolution/3077-500 Stats.html" target="_blank">Mineral Statistics</a>
+                </div>
+            </li>
+
+            <li class="link-container">
+                <div class="first-column">
+                    <a href="Lithium_Mineral_Evolution/LiMins_3077-0.html" target="_blank">3077-0 Ma</a>
+                </div>
+                <div class="second-column">
+                    <a href="Lithium_Mineral_Evolution/3077-0 Stats.html" target="_blank">Mineral Statistics</a>
+                </div>
+            </li>
+        </ul>
+        <p><a href="index.html">Back to Home</a></p>
+    </div>
+
     <footer>
         <p>&copy; 2024 LMLD Resources</p>
     </footer>
