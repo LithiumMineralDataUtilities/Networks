@@ -39,7 +39,9 @@
         }
         .diagram-list li {
             margin: 10px 0;
-            position: relative; /* This allows us to control positioning of the second link set */
+            position: relative; /* Positioning context for the second link */
+            width: 100%; /* Ensure each item takes the full width */
+            display: flex; /* Align the links side by side */
         }
         .diagram-list a {
             text-decoration: none;
@@ -50,14 +52,15 @@
             text-decoration: underline;
         }
 
-        /* Ensures that the second column is aligned properly */
+        /* Style for the first column of links */
         .first-column {
-            margin-right: 400px; /* Space between the first and second link */
+            margin-right: 20px; /* Space between the first and second link */
         }
 
+        /* Positioning the second column with percentages */
         .second-column {
-            position: absolute; /* Position it absolutely relative to the parent li */
-            left: 60px; /* Move 60px to the right from the first column */
+            position: absolute; /* Positioned relative to the <li> */
+            left: 60%; /* Move 60% to the right */
             top: 0; /* Align to the top of the li element */
         }
     </style>
